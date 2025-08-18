@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -13,15 +13,15 @@ import {
 import { waitForTransactionReceipt } from "wagmi/actions";
 import { ToastContainer, toast } from "react-toastify";
 import { config } from "../../config";
-import { injected } from 'wagmi/connectors';
+import { injected } from "wagmi/connectors";
 
 /** -------------------------------
  *  Network + Contracts
  *  ------------------------------- */
 const USDT_ADDRESS = {
   56: "0x55d398326f99059fF775485246999027B3197955", // BSC
-  1: "0xdAC17F958D2ee523a2206206994597C13D831ec7",  // Ethereum
-  137: "0x3813e82e6f7098b9583FC0F33a962D02018B6803"  // Polygon
+  1: "0xdAC17F958D2ee523a2206206994597C13D831ec7", // Ethereum
+  137: "0x3813e82e6f7098b9583FC0F33a962D02018B6803", // Polygon
 } as const;
 
 const USDT_ABI = [
@@ -67,9 +67,9 @@ const V2_ABI = [
 /** -------------------------------
  *  Presale / UI Constants
  *  ------------------------------- */
-const GOAL_TOKENS = 8_500_000;        // READ goal
-const CURRENT_PRICE_PER_READ = 0.16;  // current tier
-const NEXT_PRICE_PER_READ = 0.21;     // next tier
+const GOAL_TOKENS = 8_500_000; // READ goal
+const CURRENT_PRICE_PER_READ = 0.16; // current tier
+const NEXT_PRICE_PER_READ = 0.21; // next tier
 
 const MIN_INVESTMENT = 10;
 const MAX_INVESTMENT = 100000;
@@ -102,13 +102,18 @@ const InvestmentCard: React.FC = () => {
 
   // Combine totals for progress
   useEffect(() => {
-    const v1 = v1TokensSoldRaw ? Number(formatUnits(v1TokensSoldRaw as bigint, DECIMALS)) : 0;
-    const v2 = v2TokensSoldRaw ? Number(formatUnits(v2TokensSoldRaw as bigint, DECIMALS)) : 0;
+    const v1 = v1TokensSoldRaw
+      ? Number(formatUnits(v1TokensSoldRaw as bigint, DECIMALS))
+      : 0;
+    const v2 = v2TokensSoldRaw
+      ? Number(formatUnits(v2TokensSoldRaw as bigint, DECIMALS))
+      : 0;
     setTokensSold(v1 + v2);
   }, [v1TokensSoldRaw, v2TokensSoldRaw]);
 
   const readTokens = Math.floor(usdtAmount / CURRENT_PRICE_PER_READ);
-  const progress = tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
+  const progress =
+    tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
 
   const handleSliderChange = (val: number) => {
     setUsdtAmount(val);
@@ -132,8 +137,10 @@ const InvestmentCard: React.FC = () => {
   };
 
   const handleBuy = async () => {
-    if (!isConnected || !address) return toast.warning("🔌 Connect your wallet");
-    if (usdtAmount < MIN_INVESTMENT) return toast.error(`Minimum investment is $${MIN_INVESTMENT}`);
+    if (!isConnected || !address)
+      return toast.warning("🔌 Connect your wallet");
+    if (usdtAmount < MIN_INVESTMENT)
+      return toast.error(`Minimum investment is $${MIN_INVESTMENT}`);
 
     const usdtAddress = USDT_ADDRESS[chainId as keyof typeof USDT_ADDRESS];
     if (!usdtAddress) return toast.error("Unsupported network");
@@ -155,7 +162,8 @@ const InvestmentCard: React.FC = () => {
         hash: approveHash,
         chainId,
       });
-      if (approveReceipt.status !== "success") throw new Error("Approval transaction failed");
+      if (approveReceipt.status !== "success")
+        throw new Error("Approval transaction failed");
       toast.success("✅ Approved successfully!");
 
       // 2) Deposit USDT into V2
@@ -171,9 +179,14 @@ const InvestmentCard: React.FC = () => {
         hash: depositHash,
         chainId,
       });
-      if (depositReceipt.status !== "success") throw new Error("Deposit transaction failed");
+      if (depositReceipt.status !== "success")
+        throw new Error("Deposit transaction failed");
 
-      toast.success(`🎉 You bought ${readTokens} $READ at $${CURRENT_PRICE_PER_READ.toFixed(2)}/READ`);
+      toast.success(
+        `🎉 You bought ${readTokens} $READ at $${CURRENT_PRICE_PER_READ.toFixed(
+          2
+        )}/READ`
+      );
 
       // optional referral callback
       const referralCode = localStorage.getItem("referralCode");
@@ -188,13 +201,15 @@ const InvestmentCard: React.FC = () => {
             transactionHash: depositHash,
             pricePerToken: CURRENT_PRICE_PER_READ,
           }),
-        }).catch(() => { });
+        }).catch(() => {});
       }
     } catch (err) {
       const e = err as Error & { shortMessage?: string };
       console.error("❌ TX Failed:", e);
       const msg = e.shortMessage || e.message || "Something went wrong.";
-      toast.error(`❌ ${msg.includes("insufficient") ? "Insufficient balance" : msg}`);
+      toast.error(
+        `❌ ${msg.includes("insufficient") ? "Insufficient balance" : msg}`
+      );
     } finally {
       setLoading(false);
     }
@@ -203,7 +218,7 @@ const InvestmentCard: React.FC = () => {
   return (
     <div className="w-full flex justify-center px-4 sm:px-6 md:px-0 relative ">
       <ToastContainer position="top-center" autoClose={5000} />
-      <div className="w-full max-w-6xl mx-auto p-6 sm:p-8  bg-[#00000036] bg-color-grey-7 rounded-[20px] border border-storck/30">
+      <div className="w-full max-w-6xl mx-auto p-6 sm:p-8 rounded-[20px] bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl ">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Panel */}
           <div className="flex-1 text-white font-montserrat space-y-4  max-h-[580px]">
@@ -257,15 +272,30 @@ const InvestmentCard: React.FC = () => {
               <div className="text-sm font-medium mb-1 text-center">
                 {tokensSold === null ? (
                   <span className="flex justify-center items-center gap-2">
-                    <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                    <svg
+                      className="animate-spin h-4 w-4 text-white"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      />
                     </svg>
                     Loading total sold...
                   </span>
                 ) : (
                   <>
-                    {tokensSold.toLocaleString()} / {GOAL_TOKENS.toLocaleString()} $READ Sold
+                    {tokensSold.toLocaleString()} /{" "}
+                    {GOAL_TOKENS.toLocaleString()} $READ Sold
                   </>
                 )}
               </div>
@@ -278,7 +308,8 @@ const InvestmentCard: React.FC = () => {
             </div>
 
             <p className="text-xs text-white/60 mt-4 text-center sm:text-left">
-              Funds are securely deposited on-chain. Tokens will be distributed at TGE.
+              Funds are securely deposited on-chain. Tokens will be distributed
+              at TGE.
             </p>
 
             {!isConnected ? (
@@ -297,8 +328,19 @@ const InvestmentCard: React.FC = () => {
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">
                     <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      />
                     </svg>
                     Processing...
                   </span>
@@ -310,12 +352,17 @@ const InvestmentCard: React.FC = () => {
           </div>
 
           {/* Right Panel — restored styling & content */}
-          <div className="flex-1 bg-color-grey-20-65%/60 rounded-[19px] p-6 border-2 overflow-hidden border-white/50 text-white font-montserrat max-h-[580px]">
-
+          <div className="flex-1 border border-white/10 shadow-xl  rounded-[19px] p-6 overflow-hidden text-white font-montserrat max-h-[580px]">
             <div className="flex flex-col items-center justify-center">
               <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
-                  <Image src="/owl_straight.svg" alt="Tier Logo" width={20} height={20} className="w-5 h-5" />
+                  <Image
+                    src="/owl_straight.svg"
+                    alt="Tier Logo"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5"
+                  />
                 </div>
                 Private Sale Tier 1
               </h3>
@@ -323,10 +370,18 @@ const InvestmentCard: React.FC = () => {
 
             <div className="bg-black rounded-[19px] p-4">
               <ul>
-                <li className="list-disc list-inside">1% $READ bonus for maintaining learning streaks</li>
-                <li className="list-disc list-inside">Eligible for Invincible DAO giveaways</li>
-                <li className="list-disc list-inside">Dedicated onboarding support</li>
-                <li className="list-disc list-inside">Priority publishing accesst</li>
+                <li className="list-disc list-inside">
+                  1% $READ bonus for maintaining learning streaks
+                </li>
+                <li className="list-disc list-inside mt-2">
+                  Eligible for Invincible DAO giveaways
+                </li>
+                <li className="list-disc list-inside mt-2">
+                  Dedicated onboarding support
+                </li>
+                <li className="list-disc list-inside mt-2">
+                  Priority publishing accesst
+                </li>
               </ul>
             </div>
 
@@ -334,14 +389,15 @@ const InvestmentCard: React.FC = () => {
               Presale Tier 2 – Coming Soon
             </h3>
 
-            <p className="text-white/80 text-center mt-3 text-lg font-normal">Price changes to $0.16</p>
+            <p className="text-white/80 text-center mt-3 text-lg font-normal">
+              Price changes to $0.16
+            </p>
 
             <img
               src="./section2/blue_token.png"
               alt="Blue Token"
               className="w-96 h-96 mx-auto mt-10"
             />
-
           </div>
           {/* End Right Panel */}
         </div>

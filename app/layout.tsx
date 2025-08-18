@@ -63,7 +63,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className="bg-black text-white font-montserrat overflow-x-hidden">
+      <body className="bg-black text-white font-montserrat overflow-x-hidden max-w-[1559px] mx-auto">
         <ContextProvider cookies={cookies}>
           <TopBanner />
           <div style={{ paddingTop: "42px" }}>

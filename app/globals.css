@@ -13,3 +13,31 @@
   display: inline-block;
   animation: marquee 20s linear infinite;
 }
+
+@keyframes marquee1 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee1 {
+  animation: marquee1 20s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-marquee1:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee2 {
+  animation: marquee1 20s linear infinite;
+  animation-direction: reverse;
+}
+
+/* Pause animation on hover */
+.animate-marquee2:hover {
+  animation-play-state: paused;
+}
