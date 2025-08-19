@@ -7,17 +7,17 @@ const UCNS: React.FC = () => {
   return (
     <div className="flex flex-col items-center gap-20 py-24 px-4 sm:px-6 lg:px-10">
       {/* Header */}
-      <div className="w-full max-w-[1546px] px-4 sm:px-10 py-11 bg-white/5 rounded-xl outline-1 outline-offset-[-1px] outline-white/20 backdrop-blur-[30.90px] flex flex-col lg:flex-row justify-between items-center gap-6">
-        <div className="text-white text-[64px] sm:text-[100px] md:text-[140px] lg:text-[164.47px] font-semibold font-['Cormorant_SC'] uppercase leading-none text-center lg:text-left">
+      <div className="w-full max-w-[1546px] px-4 sm:px-10 py-8 bg-white/5 rounded-xl outline-1 outline-offset-[-1px] outline-white/20 backdrop-blur-[30.90px] flex flex-col lg:flex-row justify-between items-center gap-6">
+        <div className="text-white text-[54px] sm:text-[85px] md:text-[120px] lg:text-[154.47px] font-semibold font-['Cormorant_SC'] uppercase leading-none text-center lg:text-left">
           UCNS
         </div>
-        <div className="w-full max-w-[475px] text-white text-2xl sm:text-4xl lg:text-6xl font-light font-['Cormorant_SC'] lowercase text-center leading-snug">
+        <div className="w-full max-w-[475px] text-white text-2xl sm:text-4xl lg:text-6xl font-light font-['Cormorant_SC'] lowercase text-center leading-[1]">
           Universal Content Numbering System
         </div>
       </div>
 
       {/* Pills Row */}
-      <div className="relative w-full max-w-7xl mx-auto px-4 py-20">
+      <div className="relative w-full max-w-7xl mx-auto px-4 pb-20">
         {/* Line (visible only on desktop) */}
         <div className="hidden lg:block absolute left-1/2 top-0 h-full w-[2px] bg-white z-0 lg:top-1/2 lg:left-0 lg:w-full lg:h-[2px]" />
 
@@ -73,7 +73,7 @@ const Node: React.FC<NodeProps> = ({ icon, title, desc, position }) => {
       {/* Desktop Zig-Zag Layout */}
       <div
         className={`hidden lg:flex flex-col items-center ${
-          isTop ? "mb-16" : "mt-16"
+          isTop ? "mb-20" : "mt-24"
         }`}
       >
         {isTop && (

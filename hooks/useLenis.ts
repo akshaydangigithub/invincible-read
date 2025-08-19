@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
 
 interface LenisOptions {
@@ -14,11 +14,21 @@ interface LenisOptions {
   infinite?: boolean;
 }
 
+// Extend Window type safely
+declare global {
+  interface Window {
+    lenis?: Lenis;
+  }
+}
+
 export const useLenis = (options?: LenisOptions) => {
+  const lenisRef = useRef<Lenis | null>(null);
+  const rafRef = useRef<number>(1);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth ease-out
       direction: "vertical",
       gestureDirection: "vertical",
       smooth: true,
@@ -29,20 +39,22 @@ export const useLenis = (options?: LenisOptions) => {
       ...options,
     });
 
-    // Make lenis globally accessible
+    lenisRef.current = lenis;
     window.lenis = lenis;
 
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafRef.current = requestAnimationFrame(raf);
     }
+    rafRef.current = requestAnimationFrame(raf);
 
-    requestAnimationFrame(raf);
-
-    // Cleanup
     return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
       lenis.destroy();
-      window.lenis = null;
+      lenisRef.current = null;
+      window.lenis = undefined;
     };
   }, [options]);
+
+  return lenisRef; // gives access to the instance
 };

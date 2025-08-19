@@ -30,7 +30,7 @@
 }
 
 .animate-marquee1 {
-  animation: marquee1 20s linear infinite;
+  animation: marquee1 10s linear infinite;
 }
 
 /* Pause animation on hover */
@@ -39,7 +39,7 @@
 }
 
 .animate-marquee2 {
-  animation: marquee1 20s linear infinite;
+  animation: marquee1 10s linear infinite;
   animation-direction: reverse;
 }
 
