@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Product+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Pro+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=SF+Compact+Display&display=swap");
+
 @import "tailwindcss";
 
 @keyframes marquee {
@@ -40,4 +46,8 @@
 /* Pause animation on hover */
 .animate-marquee2:hover {
   animation-play-state: paused;
+}
+
+.bg-custom-indigo {
+  background-color: #2b23b8;
 }

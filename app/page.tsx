@@ -6,6 +6,10 @@ import React from "react";
 import ReferAndEarn from "../components/section3/ReferAndEarn";
 import LogoScroll from "@/components/LogoScroll";
 import Authors from "@/components/Authors";
+import TokenUtilityOverview from "../components/TokenUtilityOverview";
+import Usp from "@/components/USP";
+import UCNS from "../components/UCNS";
+import Tokenomics from "@/components/Tokenomics";
 
 const page = () => {
   return (
@@ -49,6 +53,19 @@ const page = () => {
 
       <LogoScroll />
       <Authors />
+      <TokenUtilityOverview />
+      <div className="relative">
+        <img
+          src="/section3/vector2.png"
+          alt=""
+          className="w-[50%] absolute -bottom-24 -left-[10%] opacity-30 rotate-45"
+        />
+        <Usp />
+      </div>
+      <UCNS />
+      <section id="tokenomics">
+        <Tokenomics />
+      </section>
     </div>
   );
 };
