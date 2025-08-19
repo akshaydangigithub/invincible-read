@@ -9,11 +9,6 @@ const Usp = () => {
       <h1 className="hidden md:block text-white text-4xl text-center font-semibold mb-24 z-30 relative drop-shadow-lg">
         The INVINCIBLE READ is Here!
       </h1>
-
-      {/* Background shapes (desktop only) */}
-      {/* <div className="hidden md:block absolute w-[628.33px] h-[628.33px] left-[1218.87px] top-[157.08px] origin-top-left rotate-[41.10deg] bg-indigo-800" />
-      <div className="hidden md:block absolute w-[628.33px] h-[628.33px] left-[1152.4px] top-[900.96px] origin-top-left rotate-[-51.28deg] bg-blue-950" /> */}
-
       {/* Glass strips (desktop only) */}
       {Array.from({ length: 16 }).map((_, i) => (
         <div
@@ -44,7 +39,7 @@ const Usp = () => {
         className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10"
       >
         {/* LEFT COLUMN */}
-        <div className="flex flex-col gap-16 font-montserrat w-full md:w-[600px]">
+        <div className="flex flex-col gap-16 mt-44 font-montserrat w-full md:w-[600px]">
           {/* Box 1 */}
           <div className="flex flex-col gap-3 items-center md:items-end text-center md:text-right md:pr-2">
             <div className="hidden md:flex justify-end w-full">
@@ -102,7 +97,7 @@ const Usp = () => {
           <img
             src="/iPhone.svg"
             alt="iPhone Showcase"
-            className="w-[90vw] max-w-[458px] h-auto rounded-[60px] border border-white/10 shadow-2xl"
+            className="w-[70vw] max-w-[300px] h-auto rounded-[60px] border border-white/10 shadow-2xl"
           />
         </div>
 

@@ -13,6 +13,7 @@ import Tokenomics from "@/components/Tokenomics";
 import EventGallery from "@/components/EventGallery";
 import FAQ from "@/components/FAQ/FAQ";
 import EventsJourney from "@/components/Events/EventsJourney";
+import MobileMenu from "@/components/MobileMenu";
 
 const page = () => {
   return (
@@ -62,16 +63,20 @@ const page = () => {
         <img
           src="/section3/vector2.png"
           alt=""
-          className="w-[50%] absolute -bottom-24 -left-[10%] opacity-30 rotate-45"
+          className="w-[50%] absolute -bottom-24 -left-[10%] opacity-30 rotate-45 md:visible hidden"
         />
         <Usp />
       </div>
-      <UCNS />
-      <section id="tokenomics">
-        <Tokenomics />
-      </section>
-      <EventGallery />
-      <FAQ />
+      <div className="w-[90%] mx-auto">
+        <UCNS />
+        <section id="tokenomics">
+          <Tokenomics />
+        </section>
+        <EventGallery />
+        <FAQ />
+      </div>
+
+      <MobileMenu />
     </div>
   );
 };

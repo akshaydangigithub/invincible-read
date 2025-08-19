@@ -28,7 +28,7 @@ const TokenUtilityOverview: React.FC = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1110px] mx-auto bg-neutral-900 rounded-[40px] border-l border-t border-white/30 overflow-hidden px-4 sm:px-6 py-10 flex flex-col items-center gap-12">
+    <section className="md:w-full w-[90%] max-w-[1110px] mx-auto bg-neutral-900 rounded-[40px] border-l border-t border-white/30 overflow-hidden px-4 sm:px-6 py-10 flex flex-col items-center gap-12">
       {/* Headings */}
       <div className="text-center max-w-4xl">
         <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-medium font-montserrat uppercase leading-tight tracking-tight">

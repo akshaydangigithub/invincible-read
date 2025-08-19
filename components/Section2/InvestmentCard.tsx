@@ -396,7 +396,7 @@ const InvestmentCard: React.FC = () => {
             <img
               src="./section2/blue_token.png"
               alt="Blue Token"
-              className="w-96 h-96 mx-auto mt-10"
+              className="w-96 h-96 mx-auto md:mt-10"
             />
           </div>
           {/* End Right Panel */}

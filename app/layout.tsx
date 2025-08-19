@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ContextProvider from "@/context";
 import { headers } from "next/headers";
 import { ReactNode } from "react";
+import { LenisProvider } from "@/components/providers/LenisProvider";
 
 export const metadata: Metadata = {
   title: "INVINCIBLE READ – Web3 Knowledge Revolution",
@@ -65,12 +66,14 @@ export default async function RootLayout({
       </head>
       <body className="bg-black text-white font-montserrat overflow-x-hidden mx-auto">
         <ContextProvider cookies={cookies}>
-          <TopBanner />
-          <div style={{ paddingTop: "42px" }}>
-            <Navbar />
-            <main >{children}</main>
-            <Footer />
-          </div>
+          <LenisProvider>
+            <TopBanner />
+            <div style={{ paddingTop: "42px" }}>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </LenisProvider>
         </ContextProvider>
       </body>
     </html>

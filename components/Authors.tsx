@@ -65,7 +65,7 @@ const Authors = () => {
                 <img
                   src={author.img}
                   alt={`Author ${author.name}`}
-                  className="h-full w-full object-cover rounded-lg"
+                  className="h-full w-full object-cover rounded-lg grayscale-100 group-hover:grayscale-0 transition-all duration-300 ease-in-out"
                 />
 
                 {/* Author Info Overlay */}

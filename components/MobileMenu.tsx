@@ -1,0 +1,108 @@
+"use client";
+import Link from "next/link";
+import React, { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
+const socialIcons = [
+  {
+    icon: <FaTelegram className="h-5 w-5 cursor-pointer" />,
+    link: "https://telegram.org",
+  },
+  {
+    icon: <FaLinkedin className="h-5 w-5 cursor-pointer" />,
+    link: "https://linkedin.com",
+  },
+  {
+    icon: <FaDiscord className="h-5 w-5 cursor-pointer" />,
+    link: "https://discord.com",
+  },
+  {
+    icon: <FaTwitter className="h-5 w-5 cursor-pointer" />,
+    link: "https://twitter.com",
+  },
+];
+
+const Menu = () => {
+  const link = [
+    { label: "Home", href: "/" },
+    { label: "Roadmap", href: "/" },
+    { label: "Tokenomics", href: "/" },
+    { label: "Events", href: "/" },
+  ];
+
+  return (
+    <div className="bg-white/30 w-44 p-2 overflow-hidden backdrop-blur-xs rounded-lg top-0 right-0">
+      <div>
+        {link.map((item, index) => (
+          <div key={index}>
+            <Link
+              href={item.href}
+              className={`block rounded-lg cursor-pointer p-2 ${
+                index == 0 && "bg-[#2B23B8] border border-white/50"
+              }`}
+            >
+              {item.label}
+            </Link>
+          </div>
+        ))}
+      </div>
+      <div
+        style={{ boxShadow: "0px 45.44px 67.26px 0px #0000001A" }}
+        className="bg-[#5B5B5B24] w-fit flex gap-5 items-center rounded-lg p-3 mt-2"
+      >
+        {socialIcons.map((icon, index) => (
+          <a
+            key={index}
+            href={icon.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {icon.icon}
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const MobileMenu = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <div className="fixed bottom-4 right-4 z-40 flex md:hidden flex-col items-end gap-3">
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Menu />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div
+        className={`h-14 rounded-full w-14 cursor-pointer flex items-center justify-center p-3 shadow-2xl shadow-white ${
+          menuOpen ? "bg-white" : "bg-[#2B23B8]"
+        }`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? (
+          <IoClose className="text-[#2B23B8] text-2xl" />
+        ) : (
+          <img
+            src="/owl_straight.svg"
+            alt=""
+            className="h-full w-full object-cover"
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default MobileMenu;
