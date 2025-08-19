@@ -1,24 +1,25 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
 
 const socialIcons = [
   {
     icon: <FaTelegram className="h-7 w-7 cursor-pointer" />,
-    link: "https://telegram.org",
+    link: "https://t.me/invincible_read",
   },
   {
     icon: <FaLinkedin className="h-7 w-7 cursor-pointer" />,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/invincibleread/?viewAsMember=true",
   },
   {
     icon: <FaDiscord className="h-7 w-7 cursor-pointer" />,
-    link: "https://discord.com",
+    link: "https://discord.gg/jGtrk7TejJ",
   },
   {
     icon: <FaTwitter className="h-7 w-7 cursor-pointer" />,
-    link: "https://twitter.com",
+    link: "https://x.com/invincible_read",
   },
 ];
 
@@ -88,9 +89,11 @@ const InfoCard = () => {
           <button className="bg-[#3730A3] to-white cursor-pointer rounded-full mt-4 py-2 w-[80%] hover:bg-[#2b257f] duration-300">
             BUY NOW
           </button>
-          <button className="border-[1px] cursor-pointer border-white rounded-full py-2 mt-2 px-16 hover:bg-white hover:text-black duration-300">
-            VIEW WHITE-PAPER
-          </button>
+          <a target="_blank" href={"https://invincibles-organization.gitbook.io/invincible-read-whitepaper"}>
+            <button className="border-[1px] cursor-pointer border-white rounded-full py-2 mt-2 px-16 hover:bg-white hover:text-black duration-300">
+              VIEW WHITE-PAPER
+            </button>
+          </a>
           <div className="mt-6 text-indigo-400 text-sm sm:text-base font-mono tracking-widest uppercase">
             <p>Presale Tier 1 Ends in: {countdown}</p>
             <p className="animate-pulse mt-2">

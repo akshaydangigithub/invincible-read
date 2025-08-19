@@ -4,7 +4,7 @@ import Left from "./Left";
 
 const FAQ = () => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
       <Left />
       <Right />
     </div>

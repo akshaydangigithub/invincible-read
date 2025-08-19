@@ -2,11 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 const Left = () => {
   return (
-    <section className="relative w-full md:min-h-screen min-h-[100vh] overflow-hidden text-white flex flex-col items-center justify-center px-4 sm:px-8">
+    <section className="relative w-full lg:min-h-screen min-h-[100vh] overflow-hidden text-white flex flex-col items-center justify-center px-4 sm:px-8">
       <img
         src="/background2.png"
         alt="Background"

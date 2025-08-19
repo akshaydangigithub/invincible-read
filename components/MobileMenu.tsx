@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const socialIcons = [
   {
@@ -24,13 +25,13 @@ const socialIcons = [
   },
 ];
 
+const link = [
+  { label: "Home", href: "/" },
+  { label: "Roadmap", href: "/" },
+  { label: "Tokenomics", href: "/" },
+  { label: "Events", href: "/" },
+];
 const Menu = () => {
-  const link = [
-    { label: "Home", href: "/" },
-    { label: "Roadmap", href: "/" },
-    { label: "Tokenomics", href: "/" },
-    { label: "Events", href: "/" },
-  ];
 
   return (
     <div className="bg-white/30 w-44 p-2 overflow-hidden backdrop-blur-xs rounded-lg top-0 right-0">
@@ -39,9 +40,8 @@ const Menu = () => {
           <div key={index}>
             <Link
               href={item.href}
-              className={`block rounded-lg cursor-pointer p-2 ${
-                index == 0 && "bg-[#2B23B8] border border-white/50"
-              }`}
+              className={`block rounded-lg cursor-pointer p-2 ${index == 0 && "bg-[#2B23B8] border border-white/50"
+                }`}
             >
               {item.label}
             </Link>
@@ -67,11 +67,32 @@ const Menu = () => {
   );
 };
 
+const WebSocialIcons = () => {
+  return (
+    <div
+      style={{ boxShadow: "0px 45.44px 67.26px 0px #0000001A" }}
+      className="bg-[#5B5B5B24] w-fit flex gap-5 items-center flex-col rounded-lg p-3 mt-2 me-2"
+    >
+      {socialIcons.map((icon, index) => (
+        <a
+          key={index}
+          href={icon.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {icon.icon}
+        </a>
+      ))}
+    </div>
+  );
+};
+
 const MobileMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isDesktop = useMediaQuery("(min-width: 640px)");
 
   return (
-    <div className="fixed bottom-4 right-4 z-40 flex md:hidden flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 z-40 flex flex-col items-end gap-3">
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -80,15 +101,15 @@ const MobileMenu = () => {
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.3 }}
           >
-            <Menu />
+            {isDesktop ? <WebSocialIcons /> : <Menu />}
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Floating Button */}
       <div
-        className={`h-14 rounded-full w-14 cursor-pointer flex items-center justify-center p-3 shadow-2xl shadow-white ${
-          menuOpen ? "bg-white" : "bg-[#2B23B8]"
-        }`}
+        className={`h-14 rounded-full w-14 cursor-pointer flex items-center justify-center p-3 shadow-2xl shadow-white ${menuOpen ? "bg-white" : "bg-[#2B23B8]"
+          }`}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? (

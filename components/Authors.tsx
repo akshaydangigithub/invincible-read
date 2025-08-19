@@ -6,6 +6,9 @@ import {
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const authors = [
   {
@@ -54,12 +57,53 @@ const Authors = () => {
       </h2>
 
       <div className="relative w-full mt-16 overflow-hidden">
-        <div className="flex animate-marquee1 whitespace-nowrap">
-          {/* First set of logos */}
-          <div className="flex items-center space-x-14">
-            {authors.map((author, index) => (
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={16}
+          slidesPerView="auto"
+          loop={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: false,
+          }}
+          speed={3000}
+          allowTouchMove={false}
+          freeMode={true}
+          centeredSlides={false}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 14,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 16,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 18,
+            },
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 20,
+            },
+          }}
+          className="smooth-swiper"
+          style={
+            {
+              "--swiper-wrapper-transition-timing-function": "linear",
+            } as React.CSSProperties
+          }
+        >
+          {[...authors, ...authors].map((author, index) => (
+            <SwiperSlide key={index} className="flex justify-center">
               <div
-                key={`first-${index}`}
                 className="h-72 relative w-60 rounded-lg overflow-hidden p-2 bg-[#1C1C1C] group cursor-pointer"
               >
                 <img
@@ -86,9 +130,9 @@ const Authors = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <h2 className="text-center font-montserrat text-2xl leading-[1.2] tracking-wide uppercase mt-10">

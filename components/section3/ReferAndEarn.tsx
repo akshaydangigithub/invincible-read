@@ -107,8 +107,8 @@ const ReferAndEarn = () => {
           {/* Referral Info */}
           <div className="relative z-20 mt-4">
             <p className="font-montserrat font-light text-[20px] text-white/80 leading-[26px] max-w-[395px] mb-6">
-              Earn 5% <strong>$READ</strong> by referring your friends and
-              community
+              Invite friends. Earn <strong>$READ</strong> tokens. Grow the Web3 reading revolution.
+
             </p>
 
             {isConnected && !linkGenerated && (
