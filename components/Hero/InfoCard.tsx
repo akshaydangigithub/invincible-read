@@ -54,9 +54,9 @@ const InfoCard = () => {
 
   return (
     <div className="rounded-xl p-6 text-white bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl -mt-16 relative z-10">
-      <div className="flex items-start justify-between">
-        <h1 className="text-[64px] leading-none uppercase">
-          <span className="font-bold">Worlds first web3</span> <br />
+      <div className="flex items-start justify-between flex-col md:flex-row">
+        <h1 className="md:text-[64px] text-[40px] leading-none uppercase">
+          <span className="font-bold">Worlds first web3</span> <br className="md:visible hidden" />
           Publishing company
         </h1>
 
@@ -64,7 +64,7 @@ const InfoCard = () => {
           style={{
             boxShadow: "0px 45.44px 67.26px 0px #0000001A",
           }}
-          className="bg-[#5B5B5B24] flex gap-5 items-center rounded-lg p-3"
+          className="bg-[#5B5B5B24] w-fit flex gap-5 items-center rounded-lg p-3 md:mt-0 mt-5"
         >
           {socialIcons.map((icon, index) => (
             <a
@@ -100,8 +100,8 @@ const InfoCard = () => {
           </div>
         </div>
 
-        <div className="w-full col-span-5 pt-3 flex flex-col items-end">
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-10 text-white font-semibold text-base sm:text-md uppercase">
+        <div className="w-full col-span-5 md:pt-3 pt-10 flex flex-col md:items-end">
+          <div className="flex justify-center items-center gap-4 sm:gap-10 text-white font-semibold text-base sm:text-md uppercase">
             {["Audited", "Secured", "Verified"].map((label) => (
               <div key={label} className="flex items-center gap-2">
                 <span>{label}</span>

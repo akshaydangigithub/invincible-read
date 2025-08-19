@@ -10,6 +10,9 @@ import TokenUtilityOverview from "../components/TokenUtilityOverview";
 import Usp from "@/components/USP";
 import UCNS from "../components/UCNS";
 import Tokenomics from "@/components/Tokenomics";
+import EventGallery from "@/components/EventGallery";
+import FAQ from "@/components/FAQ/FAQ";
+import EventsJourney from "@/components/Events/EventsJourney";
 
 const page = () => {
   return (
@@ -42,7 +45,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <img
           src="/section3/vector1.png"
           alt=""
@@ -53,6 +56,7 @@ const page = () => {
 
       <LogoScroll />
       <Authors />
+      <EventsJourney />
       <TokenUtilityOverview />
       <div className="relative">
         <img
@@ -66,6 +70,8 @@ const page = () => {
       <section id="tokenomics">
         <Tokenomics />
       </section>
+      <EventGallery />
+      <FAQ />
     </div>
   );
 };

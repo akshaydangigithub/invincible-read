@@ -28,7 +28,7 @@ const NavButtons: React.FC = () => {
         </span>
       </div>
 
-      <div className="px-4 sm:px-[31.78px] py-2.5 sm:py-[12.54px] bg-[#2B23B8] rounded-full flex items-center cursor-pointer hover:bg-[#2c26a0] duration-200">
+      <div className="px-4 sm:px-[31.78px] py-2.5 sm:py-[12.54px] bg-[#2B23B8] rounded-full md:flex hidden items-center cursor-pointer hover:bg-[#2c26a0] duration-200">
         <span className="text-white text-xs sm:text-[11.15px] font-montserrat font-semibold uppercase">
           SIGN UP
         </span>

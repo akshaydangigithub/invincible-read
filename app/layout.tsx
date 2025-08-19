@@ -63,12 +63,12 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className="bg-black text-white font-montserrat overflow-x-hidden max-w-[1559px] mx-auto">
+      <body className="bg-black text-white font-montserrat overflow-x-hidden mx-auto">
         <ContextProvider cookies={cookies}>
           <TopBanner />
           <div style={{ paddingTop: "42px" }}>
             <Navbar />
-            <main>{children}</main>
+            <main >{children}</main>
             <Footer />
           </div>
         </ContextProvider>

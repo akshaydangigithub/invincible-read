@@ -6,14 +6,13 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const images: string[] = [
-  "/home/img1.jpeg",
-  "/home/img2.jpeg",
+  "/home/img1.jpg",
+  "/home/img2.jpg",
   "/home/img3.jpeg",
-  "/home/img4.jpeg",
-  "/home/img5.jpeg",
+  "/home/img4.png",
+  "/home/img5.png",
   "/home/img6.jpeg",
-  "/home/img7.jpeg",
-  "/home/img8.jpeg",
+  "/home/img7.jpg",
 ];
 
 const ImageScroller: FC = () => {

@@ -9,59 +9,47 @@ import {
 
 const authors = [
   {
-    name: "Nitish Rajput",
-    img: "/authors/img1.png",
+    name: "Ajay Thakar",
+    img: "/authors/ajaythakar.jpg",
+  },
+  {
+    name: "Anant Ladha",
+    img: "/authors/Anant_Ladha_BG.jpg",
+  },
+  {
+    name: "Budhil Vyas",
+    img: "/authors/Budhil Vyas.jpg",
+  },
+  {
+    name: "Dr. Mukul Agrawal",
+    img: "/authors/Dr.-Mukul-Agrawal.webp",
+  },
+  {
+    name: "Neeraj Joshi",
+    img: "/authors/Neeraj Joshi.jpg",
+  },
+  {
+    name: "Pankaj Ladha",
+    img: "/authors/Pankaj Ladha.jpg",
   },
   {
     name: "Pushkar Raj Thakur",
-    img: "/authors/img2.png",
+    img: "/authors/Pushkar-Raj-Thakur-1.webp",
   },
   {
-    name: "Sachin Choudhary",
-    img: "/authors/img3.png",
+    name: "Sachin Kumar",
+    img: "/authors/Sachin Kumar.jpg",
   },
   {
-    name: "Vrindavanchandra Das",
-    img: "/authors/img4.png",
-  },
-  {
-    name: "Dr. Shikha Singh",
-    img: "/authors/img5.png",
-  },
-  {
-    name: "Hans Raj Hans",
-    img: "/authors/img6.png",
-  },
-  {
-    name: "Nitish Rajput",
-    img: "/authors/img1.png",
-  },
-  {
-    name: "Pushkar Raj Thakur",
-    img: "/authors/img2.png",
-  },
-  {
-    name: "Sachin Choudhary",
-    img: "/authors/img3.png",
-  },
-  {
-    name: "Vrindavanchandra Das",
-    img: "/authors/img4.png",
-  },
-  {
-    name: "Dr. Shikha Singh",
-    img: "/authors/img5.png",
-  },
-  {
-    name: "Hans Raj Hans",
-    img: "/authors/img6.png",
+    name: "Sagar Sinha",
+    img: "/authors/sagarsinha.jpg",
   },
 ];
 
 const Authors = () => {
   return (
     <section className="relative w-full text-white overflow-hidden py-20 px-4 sm:px-10">
-      <h2 className="text-center font-montserrat text-[48px] sm:text-[60px] leading-[72px] tracking-wide uppercase mb-10">
+      <h2 className="text-center font-montserrat text-[40px] sm:text-[60px] leading-[1.4] tracking-wide uppercase mb-10">
         <span className="font-bold">Invincible</span> authors
       </h2>
 
@@ -103,7 +91,7 @@ const Authors = () => {
         </div>
       </div>
 
-      <h2 className="text-center font-montserrat text-2xl leading-[72px] tracking-wide uppercase mt-10">
+      <h2 className="text-center font-montserrat text-2xl leading-[1.2] tracking-wide uppercase mt-10">
         Powering <span className="font-bold">2000+</span> Authors and{" "}
         <span className="font-bold">500+</span> Influencer Books.
       </h2>
