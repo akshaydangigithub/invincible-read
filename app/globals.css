@@ -53,3 +53,11 @@
 .bg-custom-indigo {
   background-color: #2b23b8;
 }
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant', serif;
+}

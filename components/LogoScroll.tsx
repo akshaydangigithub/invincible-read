@@ -1,24 +1,11 @@
 "use client";
 
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const logos = [
-  "/logos/logo1.webp",
-  "/logos/logo2.webp",
-  "/logos/logo3.webp",
-  "/logos/logo4.webp",
-  "/logos/logo5.webp",
-  "/logos/logo6.webp",
-  "/logos/logo7.webp",
-  "/logos/logo8.webp",
-  "/logos/logo9.webp",
-  "/logos/logo10.webp",
-  "/logos/logo11.png",
-  "/logos/logo12.png",
-  "/logos/logo13.svg",
-  "/logos/logo14.jpeg",
-  "/logos/logo15.jpeg",
-  "/logos/logo16.jpeg",
   "/logos/logo1.webp",
   "/logos/logo2.webp",
   "/logos/logo3.webp",
@@ -49,19 +36,44 @@ const LogoScroll = () => {
 
       {/* Marquee Container */}
       <div className="relative w-full mt-16 overflow-hidden">
-        <div className="flex animate-marquee2 whitespace-nowrap">
-          {/* First set of logos */}
-          <div className="flex items-center space-x-14">
-            {logos.map((logo, index) => (
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={20}
+          slidesPerView="auto"
+          loop={true}
+          autoplay={{
+            delay: 0, // continuous flow
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            reverseDirection: true,
+          }}
+
+          speed={4000}
+          allowTouchMove={false}
+          freeMode={true}
+          centeredSlides={false}
+          breakpoints={{
+            320: { slidesPerView: 2, spaceBetween: 22 },
+            640: { slidesPerView: 3, spaceBetween: 24 },
+            768: { slidesPerView: 4, spaceBetween: 26 },
+            1024: { slidesPerView: 5, spaceBetween: 28 },
+            1280: { slidesPerView: 6, spaceBetween: 30 },
+          }}
+          className="smooth-swiper"
+          style={{
+            "--swiper-wrapper-transition-timing-function": "linear",
+          } as React.CSSProperties}
+        >
+          {logos.map((logo, index) => (
+            <SwiperSlide key={index} className="flex items-center relative justify-center">
               <img
-                key={`first-${index}`}
                 src={logo}
                 alt={`Logo ${index + 1}`}
-                className="h-12 flex-shrink-0"
+                className="h-20 object-contain"
               />
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

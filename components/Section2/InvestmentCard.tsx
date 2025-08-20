@@ -65,7 +65,7 @@ const V2_ABI = [
 ] as const;
 
 /** -------------------------------
- *  Presale / UI Constants
+ *  Private Sale / UI Constants
  *  ------------------------------- */
 const GOAL_TOKENS = 8_500_000; // READ goal
 const CURRENT_PRICE_PER_READ = 0.16; // current tier
@@ -81,6 +81,7 @@ const InvestmentCard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [tokensSold, setTokensSold] = useState<number | null>(null);
+  const [tokensSold2, setTokensSold2] = useState<number>(517254.101);
 
   const { isConnected, address } = useAccount();
   const chainId = useChainId();
@@ -113,7 +114,8 @@ const InvestmentCard: React.FC = () => {
 
   const readTokens = Math.floor(usdtAmount / CURRENT_PRICE_PER_READ);
   const progress =
-    tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
+    // tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
+    tokensSold2 !== null ? Math.min((tokensSold2 / GOAL_TOKENS) * 100, 100) : 0;
 
   const handleSliderChange = (val: number) => {
     setUsdtAmount(val);
@@ -201,7 +203,7 @@ const InvestmentCard: React.FC = () => {
             transactionHash: depositHash,
             pricePerToken: CURRENT_PRICE_PER_READ,
           }),
-        }).catch(() => {});
+        }).catch(() => { });
       }
     } catch (err) {
       const e = err as Error & { shortMessage?: string };
@@ -227,11 +229,11 @@ const InvestmentCard: React.FC = () => {
 
             {/* Current price */}
             <div className="flex items-center justify-between text-sm bg-white/10 p-2 rounded">
-              <span>Current Presale Price</span>
+              <span>Current Private Sale Price</span>
               <strong>${CURRENT_PRICE_PER_READ.toFixed(2)} / READ</strong>
             </div>
 
-            <label className="text-sm mt-2">Use slider:</label>
+            <label className="text-sm">Use slider:</label>
             <input
               type="range"
               min={MIN_INVESTMENT}
@@ -262,7 +264,7 @@ const InvestmentCard: React.FC = () => {
               inputMode="decimal"
               value={customAmount}
               onChange={(e) => handleCustomInput(e.target.value)}
-              className="w-full p-2 rounded bg-white/10 border border-white/20 text-white"
+              className="w-full mt-3 p-2 rounded bg-white/10 border border-white/20 text-white"
               placeholder="Enter amount in USDT"
             />
             {error && <div className="text-red-400 text-sm mt-2">{error}</div>}
@@ -294,7 +296,7 @@ const InvestmentCard: React.FC = () => {
                   </span>
                 ) : (
                   <>
-                    {tokensSold.toLocaleString()} /{" "}
+                    {tokensSold2.toLocaleString()} /{" "}
                     {GOAL_TOKENS.toLocaleString()} $READ Sold
                   </>
                 )}
@@ -386,7 +388,7 @@ const InvestmentCard: React.FC = () => {
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-center mt-5">
-              Presale Tier 2 – Coming Soon
+              Private Sale Tier 2 – Coming Soon
             </h3>
 
             <p className="text-white/80 text-center mt-3 text-lg font-normal">

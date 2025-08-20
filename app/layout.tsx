@@ -22,7 +22,7 @@ export const metadata: Metadata = {
         url: "https://invincibleread.com/og-banner.png",
         width: 1200,
         height: 630,
-        alt: "INVINCIBLE READ Presale",
+        alt: "INVINCIBLE READ Private Sale",
       },
     ],
     locale: "en_US",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "INVINCIBLE READ Presale",
+    title: "INVINCIBLE READ Private Sale",
     description: "Learn and earn with $READ tokens.",
     images: ["https://invincibleread.com/og-banner.png"],
   },

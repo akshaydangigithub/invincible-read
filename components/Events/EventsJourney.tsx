@@ -1,23 +1,8 @@
 "use client";
 
+import { Event, EventCardProps, Position } from "@/types/interface";
 import React, { useState, useEffect } from "react";
 
-// Types
-interface Event {
-  id: number;
-  edition: string;
-  date: string;
-  crowd: number;
-  venue: string;
-  description: string;
-  images: string[];
-}
-
-interface Position {
-  x: number;
-  y: number;
-  isAbove: boolean;
-}
 
 // Mock Heading component
 const Heading: React.FC = () => (
@@ -68,9 +53,8 @@ const ImageCarousel: React.FC<{ images: string[]; edition: string }> = ({
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
-              index === currentIndex ? "bg-white" : "bg-white/40"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-white" : "bg-white/40"
+              }`}
             type="button"
             aria-label={`Go to image ${index + 1}`}
           />
@@ -89,12 +73,7 @@ const ImageCarousel: React.FC<{ images: string[]; edition: string }> = ({
   );
 };
 
-// Event Card Component
-interface EventCardProps {
-  event: Event;
-  position: { x: number; y: number };
-  onClose: () => void;
-}
+
 
 const EventCard = React.forwardRef<HTMLDivElement, EventCardProps>(
   ({ event, position, onClose }, ref) => {

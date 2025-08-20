@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
 
@@ -57,7 +56,7 @@ const InfoCard = () => {
     <div className="rounded-xl p-6 text-white bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl -mt-16 relative z-10">
       <div className="flex items-start justify-between flex-col md:flex-row">
         <h1 className="md:text-[64px] text-[40px] leading-none uppercase">
-          <span className="font-bold">Worlds first web3</span> <br className="md:visible hidden" />
+          <span className="font-bold">Worlds first web3</span> <br className="md:block hidden" />
           Publishing company
         </h1>
 
@@ -89,13 +88,13 @@ const InfoCard = () => {
           <button className="bg-[#3730A3] to-white cursor-pointer rounded-full mt-4 py-2 w-[80%] hover:bg-[#2b257f] duration-300">
             BUY NOW
           </button>
-          <a target="_blank" href={"https://invincibles-organization.gitbook.io/invincible-read-whitepaper"}>
+          {/* <a target="_blank" href={"https://invincibles-organization.gitbook.io/invincible-read-whitepaper"}>
             <button className="border-[1px] cursor-pointer border-white rounded-full py-2 mt-2 px-16 hover:bg-white hover:text-black duration-300">
               VIEW WHITE-PAPER
             </button>
-          </a>
+          </a> */}
           <div className="mt-6 text-indigo-400 text-sm sm:text-base font-mono tracking-widest uppercase">
-            <p>Presale Tier 1 Ends in: {countdown}</p>
+            <p>Private Sale Tier 1 Ends in: {countdown}</p>
             <p className="animate-pulse mt-2">
               Current stage price: $0.16/READ &nbsp;&nbsp;|&nbsp;&nbsp; Next
               stage price: $0.21/READ

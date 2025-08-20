@@ -5,8 +5,8 @@ import React from "react";
 const NavLinks: React.FC = () => {
   const links = [
     { label: "Home", href: "/" },
-    { label: "Roadmap", href: "/#roadmap" },
     { label: "Tokenomics", href: "/#tokenomics" },
+    { label: "White-Paper", href: "/" },
     { label: "Events", href: "/archives" },
   ];
 

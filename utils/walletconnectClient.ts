@@ -10,7 +10,7 @@ export const initWalletConnect = async () => {
     core,
     metadata: {
       name: 'Invincible Read',
-      description: 'Presale Platform',
+      description: 'Private Sale Platform',
       url: 'https://invincible.read',
       icons: ['https://invincible.read/icon.png'],
     },

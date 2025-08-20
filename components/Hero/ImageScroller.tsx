@@ -75,7 +75,7 @@ const ImageScroller: FC = () => {
               <img
                 src={src}
                 alt={`Book cover ${idx + 1}`}
-                className="w-48 h-64 object-cover transition-all duration-300 ease-out
+                className="w-48 h-72 object-cover transition-all duration-300 ease-out
                          group-hover:shadow-2xl group-hover:shadow-blue-500/30 
                          group-hover:scale-105 group-hover:brightness-110
                          will-change-transform"

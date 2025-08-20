@@ -9,26 +9,26 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const socialIcons = [
   {
     icon: <FaTelegram className="h-5 w-5 cursor-pointer" />,
-    link: "https://telegram.org",
+    link: "https://t.me/invincible_read",
   },
   {
     icon: <FaLinkedin className="h-5 w-5 cursor-pointer" />,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/company/invincibleread/?viewAsMember=true",
   },
   {
     icon: <FaDiscord className="h-5 w-5 cursor-pointer" />,
-    link: "https://discord.com",
+    link: "https://discord.gg/jGtrk7TejJ",
   },
   {
     icon: <FaTwitter className="h-5 w-5 cursor-pointer" />,
-    link: "https://twitter.com",
+    link: "https://x.com/invincible_read",
   },
 ];
 
 const link = [
   { label: "Home", href: "/" },
-  { label: "Roadmap", href: "/" },
   { label: "Tokenomics", href: "/" },
+  { label: "White-Paper", href: "/" },
   { label: "Events", href: "/" },
 ];
 const Menu = () => {

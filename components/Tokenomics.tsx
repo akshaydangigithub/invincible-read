@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Tokenomics() {
   const tokens = [
-    { color: "bg-indigo-800", label: "Presale (2.5%)" },
+    { color: "bg-indigo-800", label: "Private Sale (2.5%)" },
     // { color: 'bg-indigo-800', label: 'Public Sale (0.5%)' },
     { color: "bg-indigo-300", label: "Public Sale (0.5%)" },
     { color: "bg-violet-200", label: "Rewards (35%)" },
@@ -55,7 +55,7 @@ export default function Tokenomics() {
       <div className="mt-20 w-full max-w-5xl px-6 py-6 bg-[rgba(50,46,46,0.28)] backdrop-blur-[2.5px] border border-white/30 rounded-[20px] flex flex-col sm:flex-row justify-between items-center gap-8 sm:gap-0 text-white">
         {/* Contract Address */}
         <div className="flex flex-col items-center text-center">
-          <p className="text-base font-semibold">Presale Contract Address</p>
+          <p className="text-base font-semibold">Private Sale Contract Address</p>
           <a
             href="https://bscscan.com/address/0x43A17B4e3053974486EBB10661e5423aD9C8651E#code"
             target="_blank"
