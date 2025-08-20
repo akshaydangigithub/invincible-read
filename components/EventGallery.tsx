@@ -170,16 +170,12 @@ const EventGallery = () => {
           alt="event7"
           className="w-full h-56 object-cover rounded-lg"
         />
-        <img
+        {/* <img
           src="/events/img8.png"
           alt="event8"
-          className="w-full h-56 object-cover rounded-lg"
-        />
+          className="w-full h-auto object-cover rounded-lg"
+        /> */}
       </div>
-
-      <button className="mt-8 sm:mt-10 block mx-auto px-12 sm:px-16 cursor-pointer uppercase py-2 bg-[#2B2B2B] text-white rounded-full hover:bg-[#404040] transition-colors duration-200">
-        Load more
-      </button>
     </section>
   );
 };

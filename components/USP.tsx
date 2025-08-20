@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Usp = () => {
   return (
-    <div className="w-full max-w-[2262px] relative opacity-95 overflow-hidden pt-16 md:pt-32 pb-16 md:pb-32 px-4 md:px-20">
+    <div className="w-full max-w-[2262px] relative opacity-95 overflow-hidden pt-16 md:pt-32 pb-5 md:pb-32 px-4 md:px-20">
       {/* Heading - desktop only */}
       <h1 className="hidden md:block text-white text-4xl text-center font-semibold mb-24 z-30 relative drop-shadow-lg">
         The INVINCIBLE READ is Here!
@@ -39,7 +39,7 @@ const Usp = () => {
         className="relative z-20 flex flex-col md:flex-row items-center justify-center gap-10"
       >
         {/* LEFT COLUMN */}
-        <div className="flex flex-col gap-16 mt-44 font-montserrat w-full md:w-[600px]">
+        <div className="flex flex-col gap-16 lg:mt-44 mt-10 font-montserrat w-full md:w-[600px]">
           {/* Box 1 */}
           <div className="flex flex-col gap-3 items-center md:items-end text-center md:text-right md:pr-2">
             <div className="hidden md:flex justify-end w-full">

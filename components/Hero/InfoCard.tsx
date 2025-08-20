@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaMedium, FaSquareXTwitter } from "react-icons/fa6";
 
 const socialIcons = [
   {
@@ -17,7 +18,11 @@ const socialIcons = [
     link: "https://discord.gg/jGtrk7TejJ",
   },
   {
-    icon: <FaTwitter className="h-7 w-7 cursor-pointer" />,
+    icon: <FaSquareXTwitter className="h-7 w-7 cursor-pointer" />,
+    link: "https://x.com/invincible_read",
+  },
+  {
+    icon: <FaMedium className="h-7 w-7 cursor-pointer" />,
     link: "https://x.com/invincible_read",
   },
 ];
@@ -94,20 +99,20 @@ const InfoCard = () => {
             </button>
           </a> */}
           <div className="mt-6 text-indigo-400 text-sm sm:text-base font-mono tracking-widest uppercase">
-            <p>Private Sale Tier 1 Ends in: {countdown}</p>
-            <p className="animate-pulse mt-2">
-              Current stage price: $0.16/READ &nbsp;&nbsp;|&nbsp;&nbsp; Next
+            <p className="md:text-start text-center">Private Sale Tier 1 Ends in: {countdown}</p>
+            <p className="animate-pulse mt-2 md:text-start text-center">
+              Current stage price: $0.16/READ | Next
               stage price: $0.21/READ
             </p>
           </div>
         </div>
 
         <div className="w-full col-span-5 md:pt-3 pt-10 flex flex-col md:items-end">
-          <div className="flex justify-center items-center gap-4 sm:gap-10 text-white font-semibold text-base sm:text-md uppercase">
+          <div className="flex justify-center items-center gap-4 sm:gap-10 text-white font-semibold text-sm sm:text-md uppercase">
             {["Audited", "Secured", "Verified"].map((label) => (
               <div key={label} className="flex items-center gap-2">
                 <span>{label}</span>
-                <div className="w-5 h-5 rounded-full border-2 border-blue-500 flex items-center justify-center">
+                <div className="md:w-5 w-3 md:h-5 h-3 rounded-full border-2 border-blue-500 flex items-center justify-center">
                   <svg
                     className="w-3 h-3 text-blue-500"
                     fill="none"

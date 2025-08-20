@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const UCNS: React.FC = () => {
   return (
-    <div className="flex flex-col items-center gap-20 py-24 px-4 sm:px-6 lg:px-10">
+    <div className="flex flex-col items-center gap-20 pt-24 lg:pb-24 pb-10 px-4 sm:px-6 lg:px-10">
       {/* Header */}
       <div className="w-full max-w-[1546px] px-4 sm:px-10 py-8 bg-white/5 rounded-xl outline-1 outline-offset-[-1px] outline-white/20 backdrop-blur-[30.90px] flex flex-col lg:flex-row justify-between items-center gap-6">
         <div className="text-white text-[54px] sm:text-[85px] md:text-[120px] lg:text-[154.47px] font-semibold font-['Cormorant_SC'] uppercase leading-none text-center lg:text-left">
@@ -72,9 +72,8 @@ const Node: React.FC<NodeProps> = ({ icon, title, desc, position }) => {
     <div className="flex flex-col items-center text-center w-full lg:w-1/5">
       {/* Desktop Zig-Zag Layout */}
       <div
-        className={`hidden lg:flex flex-col items-center ${
-          isTop ? "mb-20" : "mt-24"
-        }`}
+        className={`hidden lg:flex flex-col items-center ${isTop ? "mb-20" : "mt-24"
+          }`}
       >
         {isTop && (
           <>

@@ -6,27 +6,26 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 const logos = [
-  "/logos/logo1.webp",
-  "/logos/logo2.webp",
-  "/logos/logo3.webp",
-  "/logos/logo4.webp",
-  "/logos/logo5.webp",
-  "/logos/logo6.webp",
-  "/logos/logo7.webp",
-  "/logos/logo8.webp",
-  "/logos/logo9.webp",
-  "/logos/logo10.webp",
+  "/logos/logo1.png",
+  "/logos/logo2.png",
+  "/logos/logo3.png",
+  "/logos/logo4.png",
+  "/logos/logo5.png",
+  "/logos/logo6.png",
+  "/logos/logo7.png",
+  "/logos/logo8.png",
+  "/logos/logo9.png",
+  "/logos/logo10.png",
   "/logos/logo11.png",
   "/logos/logo12.png",
-  "/logos/logo13.svg",
-  "/logos/logo14.jpeg",
-  "/logos/logo15.jpeg",
-  "/logos/logo16.jpeg",
+  "/logos/logo14.png",
+  "/logos/logo15.png",
+  "/logos/logo16.png",
 ];
 
 const LogoScroll = () => {
   return (
-    <section className="relative w-full text-white overflow-hidden py-16 px-4 sm:px-10">
+    <section className="relative w-full text-white overflow-hidden pt-16 lg:pb-16 px-4 sm:px-10">
       <h2 className="text-center font-montserrat font-medium text-[40px] sm:text-[60px] leading-[1.4] tracking-wide uppercase mb-10">
         Press | award | recognition
       </h2>
@@ -69,7 +68,7 @@ const LogoScroll = () => {
               <img
                 src={logo}
                 alt={`Logo ${index + 1}`}
-                className="h-20 object-contain"
+                className="h-24 object-contain mx-auto"
               />
             </SwiperSlide>
           ))}

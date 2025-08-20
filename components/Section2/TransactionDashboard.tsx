@@ -211,7 +211,7 @@ const TransactionDashboard: React.FC = () => {
         </div>
 
         {/* Live indicator */}
-        <div className="flex justify-between items-center mt-4">
+        <div className="md:flex justify-between items-center mt-4">
           <div className="flex items-center gap-2">
             <motion.div
               className="w-2 h-2 bg-green-400 rounded-full"
@@ -229,7 +229,7 @@ const TransactionDashboard: React.FC = () => {
             <span className="text-gray-400 text-xs">({transactions.length} total)</span>
           </div>
 
-          <div className="text-gray-400 text-xs">
+          <div className="text-gray-400 text-xs md:mt-0 mt-3">
             Updates every 4 seconds
           </div>
         </div>

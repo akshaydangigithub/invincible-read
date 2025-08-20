@@ -55,8 +55,8 @@ const ReferAndEarn = () => {
   };
 
   return (
-    <section className="relative w-full text-white overflow-hidden py-20 px-4 sm:px-10">
-      <h2 className="text-center font-montserrat font-medium text-[48px] sm:text-[60px] leading-[72px] tracking-wide uppercase mb-10">
+    <section className="relative w-full text-white overflow-hidden pt-10 px-4 sm:px-10">
+      <h2 className="text-center font-montserrat font-medium text-[48px] sm:text-[60px] leading-[1.2] tracking-wide uppercase mb-10">
         Refer & <span className="font-bold">EARN</span>
       </h2>
 
@@ -168,20 +168,20 @@ const ReferAndEarn = () => {
             </div>
 
             <div className="bg-[#2B23B8] rounded-[12px] p-4 flex flex-col items-center gap-2">
-              <p className="text-[16px] font-medium">
+              <p className="text-[16px] font-medium  md:text-start text-center">
                 <span className="font-bold">10%</span> bonus on every successful
                 referral purchase
               </p>
               <hr className="border-white w-[252px]" />
-              <p className="text-[16px] font-medium">
+              <p className="text-[16px] font-medium  md:text-start text-center">
                 Leaderboard for top referrers
               </p>
-              <p>
+              <p className=" md:text-start text-center">
                 (Top <span className="font-bold">5</span> get USDT bonuses up to{" "}
                 <span className="font-bold">15%</span>)
               </p>
               <hr className="border-white w-[252px]" />
-              <p className="text-[16px] font-medium">
+              <p className="text-[16px] font-medium  md:text-start text-center">
                 <span className="font-bold">Auto-generate</span> referral code
                 upon wallet connect
               </p>

@@ -23,7 +23,7 @@ const page = () => {
         <InfoCard />
       </div>
       <div
-        className="py-10 relative mt-10"
+        className="pt-10 relative"
         style={{
           backgroundImage: "url('/section2/Background.png')",
           backgroundSize: "cover",
@@ -46,7 +46,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden lg:mt-0 mt-20">
         <img
           src="/section3/vector1.png"
           alt=""
@@ -57,7 +57,10 @@ const page = () => {
 
       <LogoScroll />
       <Authors />
-      <EventsJourney />
+      <div className="lg:block hidden">
+
+        <EventsJourney />
+      </div>
       <TokenUtilityOverview />
       <div className="relative">
         <img

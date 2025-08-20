@@ -47,6 +47,46 @@ const authors = [
     name: "Sagar Sinha",
     img: "/authors/sagarsinha.jpg",
   },
+  {
+    name: "Anirudh Acharya",
+    img: "/authors/anirudhracharya.jpg",
+  },
+  {
+    name: "Ankit Baiyanpuria",
+    img: "/authors/ankit baiyanpuria.jpg",
+  },
+  {
+    name: "Bageswar Dham",
+    img: "/authors/bageswar dham.jpg",
+  },
+  {
+    name: "Diksha Arora",
+    img: "/authors/diksha arora.png",
+  },
+  {
+    name: "Dr. Imran Patel",
+    img: "/authors/Dr. imran patel.jpg",
+  },
+  {
+    name: "Kunal Saraogi",
+    img: "/authors/kunal saraogi.jpg",
+  },
+  {
+    name: "Nitish Rajput",
+    img: "/authors/nitish rajput.jpg",
+  },
+  {
+    name: "Premanand Maharaj",
+    img: "/authors/premanand maharaj.jpg",
+  },
+  {
+    name: "Pr Sundar",
+    img: "/authors/Pr sundar.jpg",
+  },
+  {
+    name: "Sipra Mishra",
+    img: "/authors/sipra mishra.jpg",
+  },
 ];
 
 const Authors = () => {
@@ -104,7 +144,7 @@ const Authors = () => {
           {[...authors, ...authors].map((author, index) => (
             <SwiperSlide key={index} className="flex justify-center">
               <div
-                className="h-72 relative w-60 rounded-lg overflow-hidden p-2 bg-[#1C1C1C] group cursor-pointer"
+                className="h-72 relative lg:w-[90%] w-full rounded-lg overflow-hidden p-2 bg-[#1C1C1C] group cursor-pointer"
               >
                 <img
                   src={author.img}
@@ -116,7 +156,7 @@ const Authors = () => {
                 <div className="absolute z-10 -bottom-5 w-[90%] left-1/2 transform -translate-x-1/2">
                   {/* Name Card - moves up on hover */}
                   <div className="bg-[#171616B8] w-full rounded-lg flex items-center justify-center py-2 backdrop-blur-sm transition-transform duration-300 ease-out group-hover:-translate-y-10">
-                    <span className="text-white uppercase text-sm font-medium">
+                    <span className="text-white uppercase text-sm font-medium text-center">
                       {author.name}
                     </span>
                   </div>
@@ -139,10 +179,6 @@ const Authors = () => {
         Powering <span className="font-bold">2000+</span> Authors and{" "}
         <span className="font-bold">500+</span> Influencer Books.
       </h2>
-
-      <button className="mt-5 block mx-auto px-16 cursor-pointer uppercase py-2 bg-[#2B2B2B] text-white rounded-full">
-        Load more
-      </button>
     </section>
   );
 };

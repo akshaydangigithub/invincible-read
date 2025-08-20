@@ -2,7 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
-import { FaDiscord, FaLinkedin, FaTelegram, FaTwitter } from "react-icons/fa";
+import { FaDiscord, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaMedium, FaSquareXTwitter } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
@@ -20,7 +21,11 @@ const socialIcons = [
     link: "https://discord.gg/jGtrk7TejJ",
   },
   {
-    icon: <FaTwitter className="h-5 w-5 cursor-pointer" />,
+    icon: <FaSquareXTwitter className="h-7 w-7 cursor-pointer" />,
+    link: "https://x.com/invincible_read",
+  },
+  {
+    icon: <FaMedium className="h-7 w-7 cursor-pointer" />,
     link: "https://x.com/invincible_read",
   },
 ];

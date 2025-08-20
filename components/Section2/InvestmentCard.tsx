@@ -354,9 +354,9 @@ const InvestmentCard: React.FC = () => {
           </div>
 
           {/* Right Panel — restored styling & content */}
-          <div className="flex-1 border border-white/10 shadow-xl  rounded-[19px] p-6 overflow-hidden text-white font-montserrat max-h-[580px]">
+          <div className="flex-1 border border-white/10 shadow-xl  rounded-[19px] md:p-6 p-3 overflow-hidden text-white font-montserrat max-h-[580px]">
             <div className="flex flex-col items-center justify-center">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+              <h3 className="md:text-2xl text-xl font-bold mb-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
                   <Image
                     src="/owl_straight.svg"
@@ -372,22 +372,22 @@ const InvestmentCard: React.FC = () => {
 
             <div className="bg-black rounded-[19px] p-4">
               <ul>
-                <li className="list-disc list-inside">
+                <li className="list-disc ml-4 md:text-base text-sm">
                   1% $READ bonus for maintaining learning streaks
                 </li>
-                <li className="list-disc list-inside mt-2">
+                <li className="list-disc ml-4 md:text-base text-sm mt-2">
                   Eligible for Invincible DAO giveaways
                 </li>
-                <li className="list-disc list-inside mt-2">
+                <li className="list-disc ml-4 md:text-base text-sm mt-2">
                   Dedicated onboarding support
                 </li>
-                <li className="list-disc list-inside mt-2">
+                <li className="list-disc ml-4 md:text-base text-sm mt-2">
                   Priority publishing accesst
                 </li>
               </ul>
             </div>
 
-            <h3 className="text-2xl font-bold mb-4 text-center mt-5">
+            <h3 className="md:text-2xl text-xl font-bold mb-4 text-center mt-5">
               Private Sale Tier 2 – Coming Soon
             </h3>
 

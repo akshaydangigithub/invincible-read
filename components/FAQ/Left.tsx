@@ -12,7 +12,7 @@ const Left = () => {
         className="absolute md:h-[30%] h-[30%] md:top-1/2 top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
       {/* 📱 Phone Image */}
-      <div className="absolute w-[300px] h-[400px] sm:w-[250px] sm:h-[500px] left-1/2 md:top-1/2 top-[30%] transform -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute w-[300px] h-[400px] sm:w-[250px] sm:h-[500px] left-1/2 md:top-1/2 top-[40%] transform -translate-x-1/2 -translate-y-1/2 z-20">
         <Image
           src="/iPhone2.png"
           alt="App Phone"
@@ -22,7 +22,7 @@ const Left = () => {
       </div>
 
       {/* 📢 Headings */}
-      <div className="text-center z-20 px-4 md:mb-[25rem] mb-[40rem] w-fit mx-auto">
+      <div className="text-center z-20 px-4 md:mb-[25rem] mb-[30rem] w-fit mx-auto">
         <h2 className="text-[40px] sm:text-[60px] leading-[1] font-['Cormorant_SC'] font-semibold uppercase tracking-[-0.04em'] max-w-[80vw] break-words">
           DOWNLOAD
         </h2>
@@ -32,7 +32,7 @@ const Left = () => {
         </div>
       </div>
 
-      <div className="mb-34 z-20 absolute bottom-[8%] flex flex-col items-center justify-center">
+      <div className="mb-34 z-20 absolute lg:bottom-16 -bottom-[12%] flex flex-col items-center justify-center">
         <p className="text-white text-center">DOWNLOAD FROM</p>
         <div className="flex items-center gap-2 mt-5 flex-col md:flex-row">
           <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
