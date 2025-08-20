@@ -3,7 +3,6 @@
 import { Event, EventCardProps, Position } from "@/types/interface";
 import React, { useState, useEffect } from "react";
 
-
 // Mock Heading component
 const Heading: React.FC = () => (
   <>
@@ -53,8 +52,9 @@ const ImageCarousel: React.FC<{ images: string[]; edition: string }> = ({
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-white" : "bg-white/40"
-              }`}
+            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+              index === currentIndex ? "bg-white" : "bg-white/40"
+            }`}
             type="button"
             aria-label={`Go to image ${index + 1}`}
           />
@@ -72,8 +72,6 @@ const ImageCarousel: React.FC<{ images: string[]; edition: string }> = ({
     </div>
   );
 };
-
-
 
 const EventCard = React.forwardRef<HTMLDivElement, EventCardProps>(
   ({ event, position, onClose }, ref) => {
@@ -347,58 +345,42 @@ const EventsJourney: React.FC = () => {
       venue: "DLF Cyberhub",
       description:
         "The opening act of daring writers in first print and emerging voices. The edition consisted of inspiring speeches of publishing pioneers, educators, and startup leaders and enabled Invincible to become a mission-driven entrepreneurship and empowerment organization.",
-      images: [
-        "/events/img6.jpg",
-        "/events/img12.jpg",
-        "/events/img7.jpg",
-      ],
+      images: ["/events/img6.jpg", "/events/img12.jpg", "/events/img7.jpg"],
     },
     {
       id: 2,
       edition: "2ND EDITION",
-      date: "Nov 2020",
+      date: "Nov 2021",
       crowd: 3000,
       venue: "Online",
       description:
         "A powerful gathering of 20+ speakers — from educators to startup founders — brought sharp focus on education reform, startup journeys, and youth-driven innovation. This edition celebrated the spark of young literary and entrepreneurial talent.",
-      images: [
-        "/events/img8.jpg",
-        "/events/img9.jpg",
-        "/events/img10.jpg",
-      ],
+      images: ["/events/img8.jpg", "/events/img9.jpg", "/events/img10.jpg"],
     },
     {
       id: 3,
       edition: "3RD EDITION",
-      date: "Nov 2021",
+      date: "Nov 2022",
       crowd: 8500,
       venue: "Online",
       description:
         "Leading an online event with more than 10,000 attendees, this season of the online festival addressed the topics such as mental health, online education, and pandemic resilience in their topicality. It presented authors, psychologists, and creators and gave out rays of hope and knowledge in times when one did not know what to expect.",
-      images: [
-        "/events/img11.jpg",
-        "/events/img12.jpg",
-        "/events/img13.jpg",
-      ],
+      images: ["/events/img11.jpg", "/events/img12.jpg", "/events/img13.jpg"],
     },
     {
       id: 4,
       edition: "4TH EDITION",
-      date: "Oct 2022",
+      date: "Oct 2023",
       crowd: 38000,
       venue: "Cyberhub",
       description:
         "With a twist to the maker economy, this edition was an in-depth discussion on self-publishing, personal branding and influencer-driven storytelling. It equipped the voice of the next-gen with book launches to getting-down-to-business workshops in the art of creating content and public speaking.",
-      images: [
-        "/events/img14.jpg",
-        "/events/img15.jpg",
-        "/events/img16.jpg",
-      ],
+      images: ["/events/img14.jpg", "/events/img15.jpg", "/events/img16.jpg"],
     },
     {
       id: 5,
       edition: "5TH EDITION",
-      date: "Feb 2023",
+      date: "Feb 2024",
       crowd: 82000,
       venue: "Cyberhub",
       description:
@@ -414,16 +396,12 @@ const EventsJourney: React.FC = () => {
     {
       id: 6,
       edition: "6TH EDITION",
-      date: "Feb 2024",
+      date: "Feb 2025",
       crowd: 150000,
       venue: "Ambience Mall",
       description:
         "The grandest edition yet — spotlighting leaders from AI, finance, and entrepreneurship. Packed with student-led interactions, live content creation, and deep conversations, it stood as India’s biggest celebration of youth, innovation, and authorship.",
-      images: [
-        "/events/img1.jpg",
-        "/events/img6.jpg",
-        "/events/img3.jpg",
-      ],
+      images: ["/events/img1.jpg", "/events/img6.jpg", "/events/img3.jpg"],
     },
   ];
 
@@ -491,11 +469,7 @@ const EventsJourney: React.FC = () => {
               <EventCard
                 ref={cardRef}
                 event={selected}
-                position={
-                  typeof window !== "undefined" && window.innerWidth < 640
-                    ? { x: 50, y: 50 }
-                    : getCardPosition(selected.id)
-                }
+                position={{ x: 50, y: 30 }}
                 onClose={handleCloseCard}
               />
             )}
