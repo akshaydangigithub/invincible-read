@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Left = () => {
   return (
@@ -35,21 +36,23 @@ const Left = () => {
       <div className="mb-34 z-20 absolute lg:bottom-16 -bottom-[12%] flex flex-col items-center justify-center">
         <p className="text-white text-center">DOWNLOAD FROM</p>
         <div className="flex items-center gap-2 mt-5 flex-col md:flex-row">
-          <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
-            <img
-              src="/icons/googleplay.svg"
-              alt="google play"
-              className="h-[25px]"
-            />
-            <div>
-              <span className="text-white leading-none text-[12px] font-thin">
-                GET IT ON
-              </span>
-              <p className="text-white uppercase text-sm font-semibold leading-none">
-                Google Play
-              </p>
+          <Link href={"/https://play.google.com/store/apps/details?id=com.invincibleapp.app&pcampaignid=web_share"}>
+            <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
+              <img
+                src="/icons/googleplay.svg"
+                alt="google play"
+                className="h-[25px]"
+              />
+              <div>
+                <span className="text-white leading-none text-[12px] font-thin">
+                  GET IT ON
+                </span>
+                <p className="text-white uppercase text-sm font-semibold leading-none">
+                  Google Play
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
           <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
             <img
               src="/icons/apple.svg"

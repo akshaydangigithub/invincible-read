@@ -2,28 +2,32 @@
 
 import React, { useEffect, useState } from "react";
 import { FaDiscord, FaLinkedin, FaTelegram } from "react-icons/fa";
-import { FaMedium, FaSquareXTwitter } from "react-icons/fa6";
+import { FaMedium, FaSquareXTwitter, FaInstagram } from "react-icons/fa6";
 
 const socialIcons = [
   {
-    icon: <FaTelegram className="h-7 w-7 cursor-pointer" />,
+    icon: <FaTelegram className="h-7 w-7 cursor-pointer hover:text-[#28A8E9] duration-100" />,
     link: "https://t.me/invincible_read",
   },
   {
-    icon: <FaLinkedin className="h-7 w-7 cursor-pointer" />,
+    icon: <FaLinkedin className="h-7 w-7 cursor-pointer hover:text-[#0A66C2] duration-100" />,
     link: "https://www.linkedin.com/company/invincibleread/?viewAsMember=true",
   },
   {
-    icon: <FaDiscord className="h-7 w-7 cursor-pointer" />,
+    icon: <FaDiscord className="h-7 w-7 cursor-pointer hover:text-[#5865F2] duration-100" />,
     link: "https://discord.gg/jGtrk7TejJ",
   },
   {
-    icon: <FaSquareXTwitter className="h-7 w-7 cursor-pointer" />,
+    icon: <FaSquareXTwitter className="h-7 w-7 cursor-pointer hover:text-[#ccc] duration-100" />,
     link: "https://x.com/invincible_read",
   },
   {
-    icon: <FaMedium className="h-7 w-7 cursor-pointer" />,
-    link: "https://x.com/invincible_read",
+    icon: <FaMedium className="h-7 w-7 cursor-pointer hover:text-[#ccc] duration-100" />,
+    link: "https://medium.com/@invincibleread",
+  },
+  {
+    icon: <FaInstagram className="h-7 w-7 cursor-pointer hover:text-[#FF03BC] duration-100" />,
+    link: "https://www.instagram.com/invincibleread/?hl=en",
   },
 ];
 
@@ -56,6 +60,13 @@ const InfoCard = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const scrollToDown = () => {
+    scrollTo({
+      top: window.scrollY + 500,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <div className="rounded-xl p-6 text-white bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl -mt-16 relative z-10">
@@ -90,7 +101,9 @@ const InfoCard = () => {
             India’s leading platform with 2000+ authors & 500+ influencer books,
             now launching $READ Token.
           </p>
-          <button className="bg-[#3730A3] to-white cursor-pointer rounded-full mt-4 py-2 w-[80%] hover:bg-[#2b257f] duration-300">
+          <button
+            onClick={scrollToDown}
+            className="bg-[#3730A3] to-white cursor-pointer rounded-full mt-4 py-4 w-[80%] mx-auto block hover:bg-[#2b257f] duration-300">
             BUY NOW
           </button>
           {/* <a target="_blank" href={"https://invincibles-organization.gitbook.io/invincible-read-whitepaper"}>
@@ -99,8 +112,8 @@ const InfoCard = () => {
             </button>
           </a> */}
           <div className="mt-6 text-indigo-400 text-sm sm:text-base font-mono tracking-widest uppercase">
-            <p className="md:text-start text-center">Private Sale Tier 1 Ends in: {countdown}</p>
-            <p className="animate-pulse mt-2 md:text-start text-center">
+            <p className="text-center">Private Sale Tier 1 Ends in: {countdown}</p>
+            <p className="animate-pulse mt-2 text-center">
               Current stage price: $0.16/READ | Next
               stage price: $0.21/READ
             </p>

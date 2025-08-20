@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TransactionData } from "@/types/interface";
+import Link from "next/link";
 
 // Initial data
 const initialData: TransactionData[] = [
@@ -226,7 +227,6 @@ const TransactionDashboard: React.FC = () => {
               }}
             />
             <span className="text-green-400 text-sm font-medium">Live Transactions</span>
-            <span className="text-gray-400 text-xs">({transactions.length} total)</span>
           </div>
 
           <div className="text-gray-400 text-xs md:mt-0 mt-3">
@@ -235,9 +235,13 @@ const TransactionDashboard: React.FC = () => {
         </div>
 
         {/* Button */}
-        <button className="mt-4 sm:mt-5 block mx-auto px-8 sm:px-10 lg:px-32 cursor-pointer uppercase py-2 sm:py-2 text-sm sm:text-base bg-[#2B2B2B] text-white rounded-full">
-          Transaction Dashboard
-        </button>
+        <Link
+          href={"/transaction"}>
+
+          <button className="mt-4 sm:mt-5 block mx-auto px-8 sm:px-10 lg:px-32 cursor-pointer uppercase py-2 sm:py-2 text-sm sm:text-base bg-[#2B2B2B] text-white rounded-full">
+            Transaction Dashboard
+          </button>
+        </Link>
       </div>
     </div>
   );

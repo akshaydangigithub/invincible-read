@@ -87,7 +87,7 @@ export default function Footer() {
                 LinkedIn
               </a>
               <a
-                href="https://medium.com/@invincibleread/how-to-participate-in-the-invincible-read-pre-sale-step-by-step-guide-510e316b428d"
+                href="https://medium.com/@invincibleread"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-300 hover:text-white text-sm transition"

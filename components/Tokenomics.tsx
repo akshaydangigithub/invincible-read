@@ -20,7 +20,7 @@ export default function Tokenomics() {
   return (
     <section className="w-full bg-black px-6 md:px-20 flex flex-col items-center text-white relative">
       {/* Heading */}
-      <h2 className="text-5xl md:text-6xl font-bold font-['Satoshi'] tracking-tight leading-[72px] text-center mb-16">
+      <h2 className="text-5xl md:text-6xl font-bold font-montserrat tracking-tight leading-[72px] text-center mb-16">
         Tokenomics
       </h2>
 
@@ -31,7 +31,7 @@ export default function Tokenomics() {
           {tokens.map((item, index) => (
             <div key={index} className="inline-flex items-center gap-3.5">
               <div className={`w-14 h-3.5 ${item.color}`} />
-              <span className="text-xl font-light font-['Poppins'] capitalize leading-9 tracking-tight">
+              <span className="text-xl font-light font-montserrat capitalize leading-9 tracking-tight">
                 {item.label}
               </span>
             </div>

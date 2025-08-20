@@ -81,7 +81,6 @@ const InvestmentCard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [tokensSold, setTokensSold] = useState<number | null>(null);
-  const [tokensSold2, setTokensSold2] = useState<number>(517254.101);
 
   const { isConnected, address } = useAccount();
   const chainId = useChainId();
@@ -115,7 +114,7 @@ const InvestmentCard: React.FC = () => {
   const readTokens = Math.floor(usdtAmount / CURRENT_PRICE_PER_READ);
   const progress =
     // tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
-    tokensSold2 !== null ? Math.min((tokensSold2 / GOAL_TOKENS) * 100, 100) : 0;
+    tokensSold !== null ? Math.min((tokensSold / GOAL_TOKENS) * 100, 100) : 0;
 
   const handleSliderChange = (val: number) => {
     setUsdtAmount(val);
@@ -224,7 +223,7 @@ const InvestmentCard: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Panel */}
           <div className="flex-1 text-white font-montserrat space-y-4  max-h-[580px]">
-            <h2 className="text-xl sm:text-2xl font-medium">Investment</h2>
+            <h2 className="text-xl sm:text-3xl font-semibold">Investment</h2>
             <p className="text-sm">Min: $10 – Max: $100,000</p>
 
             {/* Current price */}
@@ -270,7 +269,7 @@ const InvestmentCard: React.FC = () => {
             {error && <div className="text-red-400 text-sm mt-2">{error}</div>}
 
             {/* Progress / Sold */}
-            <div className="mt-6">
+            <div className="mt-3">
               <div className="text-sm font-medium mb-1 text-center">
                 {tokensSold === null ? (
                   <span className="flex justify-center items-center gap-2">
@@ -296,7 +295,7 @@ const InvestmentCard: React.FC = () => {
                   </span>
                 ) : (
                   <>
-                    {tokensSold2.toLocaleString()} /{" "}
+                    {tokensSold.toLocaleString()} /{" "}
                     {GOAL_TOKENS.toLocaleString()} $READ Sold
                   </>
                 )}
@@ -366,7 +365,7 @@ const InvestmentCard: React.FC = () => {
                     className="w-5 h-5"
                   />
                 </div>
-                Private Sale Tier 1
+                Private Sale Tier 2
               </h3>
             </div>
 
@@ -388,11 +387,11 @@ const InvestmentCard: React.FC = () => {
             </div>
 
             <h3 className="md:text-2xl text-xl font-bold mb-4 text-center mt-5">
-              Private Sale Tier 2 – Coming Soon
+              Private Sale Tier 3 – Coming Soon
             </h3>
 
             <p className="text-white/80 text-center mt-3 text-lg font-normal">
-              Price changes to $0.16
+              Price changes to $0.21
             </p>
 
             <img

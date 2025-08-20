@@ -122,8 +122,8 @@ const EventCard = React.forwardRef<HTMLDivElement, EventCardProps>(
               {/* Image Carousel */}
               <ImageCarousel images={event.images} edition={event.edition} />
 
-              <div className="p-6">
-                <div className="text-center mb-4">
+              <div className="p-4 ">
+                <div className="text-center mb-2 ">
                   <h3 className="text-2xl font-bold mb-2">
                     <span
                       className="bg-clip-text text-transparent"
@@ -140,16 +140,16 @@ const EventCard = React.forwardRef<HTMLDivElement, EventCardProps>(
                   </p>
                 </div>
 
-                <p className="text-gray-300 text-sm leading-relaxed mb-6 text-center">
+                <p className="text-gray-300 text-sm leading-relaxed mb-3 text-center">
                   {event.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white border-opacity-10">
+                <div className="grid grid-cols-2 gap-4 pt-2 border-t border-white border-opacity-10">
                   <div className="text-center">
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
                       CROWD
                     </p>
-                    <p className="text-2xl font-bold">
+                    <p className="text-xl font-bold">
                       <span
                         className="bg-clip-text text-transparent"
                         style={{
@@ -165,7 +165,7 @@ const EventCard = React.forwardRef<HTMLDivElement, EventCardProps>(
                     <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
                       VENUE
                     </p>
-                    <p className="text-2xl font-bold">
+                    <p className="text-xl font-bold">
                       <span
                         className="bg-clip-text text-transparent"
                         style={{
@@ -268,7 +268,7 @@ const TimelineNode: React.FC<{
 const TimelineCurve: React.FC = () => (
   <svg
     className="absolute inset-0 w-full h-full"
-    viewBox="0 0 1200 400"
+    viewBox="0 0 1200 500"
     preserveAspectRatio="none"
   >
     <defs>
@@ -348,9 +348,9 @@ const EventsJourney: React.FC = () => {
       description:
         "The opening act of daring writers in first print and emerging voices. The edition consisted of inspiring speeches of publishing pioneers, educators, and startup leaders and enabled Invincible to become a mission-driven entrepreneurship and empowerment organization.",
       images: [
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=250&fit=crop",
+        "/events/img6.jpg",
+        "/events/img12.jpg",
+        "/events/img7.jpg",
       ],
     },
     {
@@ -362,9 +362,9 @@ const EventsJourney: React.FC = () => {
       description:
         "A powerful gathering of 20+ speakers — from educators to startup founders — brought sharp focus on education reform, startup journeys, and youth-driven innovation. This edition celebrated the spark of young literary and entrepreneurial talent.",
       images: [
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
+        "/events/img8.jpg",
+        "/events/img9.jpg",
+        "/events/img10.jpg",
       ],
     },
     {
@@ -376,9 +376,9 @@ const EventsJourney: React.FC = () => {
       description:
         "Leading an online event with more than 10,000 attendees, this season of the online festival addressed the topics such as mental health, online education, and pandemic resilience in their topicality. It presented authors, psychologists, and creators and gave out rays of hope and knowledge in times when one did not know what to expect.",
       images: [
-        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=250&fit=crop",
+        "/events/img11.jpg",
+        "/events/img12.jpg",
+        "/events/img13.jpg",
       ],
     },
     {
@@ -390,9 +390,9 @@ const EventsJourney: React.FC = () => {
       description:
         "With a twist to the maker economy, this edition was an in-depth discussion on self-publishing, personal branding and influencer-driven storytelling. It equipped the voice of the next-gen with book launches to getting-down-to-business workshops in the art of creating content and public speaking.",
       images: [
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=250&fit=crop",
+        "/events/img14.jpg",
+        "/events/img15.jpg",
+        "/events/img16.jpg",
       ],
     },
     {
@@ -404,9 +404,11 @@ const EventsJourney: React.FC = () => {
       description:
         "A collaborative milestone that involves more than 50 educators, authors and investors. This edition was a match made in heaven between literature and innovative learning since it featured reward ceremonies in educational excellence, AI learning tool demonstrations, and launching of innovative books.",
       images: [
-        "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=250&fit=crop",
+        "/events/img17.jpg",
+        "/events/img18.jpg",
+        "/events/img19.jpg",
+        "/events/img20.jpg",
+        "/events/img21.jpg",
       ],
     },
     {
@@ -418,21 +420,21 @@ const EventsJourney: React.FC = () => {
       description:
         "The grandest edition yet — spotlighting leaders from AI, finance, and entrepreneurship. Packed with student-led interactions, live content creation, and deep conversations, it stood as India’s biggest celebration of youth, innovation, and authorship.",
       images: [
-        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=250&fit=crop",
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=250&fit=crop",
+        "/events/img1.jpg",
+        "/events/img6.jpg",
+        "/events/img3.jpg",
       ],
     },
   ];
 
   // Alternating positions (above and below curve)
   const getNodePositions = (): Position[] => [
-    { x: 8.5, y: 28, isAbove: true }, // 1st - above
-    { x: 25, y: 50, isAbove: false }, // 2nd - below
-    { x: 41.5, y: 40, isAbove: true }, // 3rd - above
-    { x: 58, y: 25, isAbove: false }, // 4th - below
-    { x: 74.5, y: 10, isAbove: true }, // 5th - above
-    { x: 95, y: 78, isAbove: false }, // 6th - below
+    { x: 8.5, y: 20, isAbove: true }, // 1st - above
+    { x: 25, y: 38, isAbove: false }, // 2nd - below
+    { x: 41.5, y: 25, isAbove: true }, // 3rd - above
+    { x: 58, y: 20, isAbove: false }, // 4th - below
+    { x: 74.5, y: 5, isAbove: true }, // 5th - above
+    { x: 95, y: 60, isAbove: false }, // 6th - below
   ];
 
   const nodePositions = getNodePositions();

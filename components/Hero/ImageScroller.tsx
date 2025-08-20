@@ -13,6 +13,8 @@ const images: string[] = [
   "/home/img5.png",
   "/home/img6.jpeg",
   "/home/img7.jpg",
+  "/home/img8.jpeg",
+  "/home/img9.jpg",
 ];
 
 const ImageScroller: FC = () => {

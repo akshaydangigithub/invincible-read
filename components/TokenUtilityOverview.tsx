@@ -28,7 +28,7 @@ const TokenUtilityOverview: React.FC = () => {
   ];
 
   return (
-    <section className="md:w-full w-[90%] max-w-[1110px] mx-auto bg-neutral-900 rounded-[40px] border-l border-t border-white/30 overflow-hidden px-4 sm:px-6 py-10 flex flex-col items-center gap-12">
+    <section className="md:w-full w-[90%] max-w-[1110px] mx-auto bg-neutral-900 rounded-[40px] border-l border-t border-white/30 overflow-hidden px-4 sm:px-6 pb-10 pt-16 flex flex-col items-center gap-12">
       {/* Headings */}
       <div className="text-center max-w-4xl">
         <h2 className="text-white text-4xl sm:text-5xl md:text-6xl font-medium font-montserrat uppercase leading-tight tracking-tight">
@@ -120,12 +120,12 @@ const TokenUtilityOverview: React.FC = () => {
             <img
               src="/gated.png"
               alt="Gated Content Illustration"
-              className="absolute -left-[10%] top-1/2 rotate-[15.67deg] w-[120%] md:w-[100%] h-auto z-0"
+              className="absolute -left-[10%] top-[30%] rotate-0 w-[120%] md:w-[100%] h-auto z-0"
             />
           </div>
 
           {/* Utility List Cards */}
-          <div className="bg-black rounded-3xl p-6 flex flex-wrap gap-4 justify-center sm:justify-start">
+          <div className="bg-black rounded-3xl grid md:grid-cols-2 p-6 flex-wrap gap-4 justify-center sm:justify-start">
             {[
               "Soulbound credential issuance",
               "DAO voting power",
@@ -134,7 +134,7 @@ const TokenUtilityOverview: React.FC = () => {
             ].map((text, i) => (
               <div
                 key={i}
-                className="flex-1 min-w-[140px] sm:min-w-[180px] md:min-w-[200px] bg-stone-950 rounded-[10px] py-6 px-4 text-center text-white text-sm font-light font-poppins"
+                className="flex items-center justify-center min-w-[140px] sm:min-w-[180px] md:min-w-[200px] bg-stone-950 rounded-[10px] py-6 px-4 text-center text-white text-sm font-light font-poppins"
               >
                 {text}
               </div>

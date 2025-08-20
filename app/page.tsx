@@ -40,7 +40,7 @@ const page = () => {
           alt=""
           className="absolute w-full h-1/2 object-cover z-10 bottom-0"
         />
-        <div className="relative z-20">
+        <div className="relative z-20" >
           <InvestmentCard />
           <TransactionDashboard />
         </div>

@@ -8,10 +8,10 @@ const UCNS: React.FC = () => {
     <div className="flex flex-col items-center gap-20 pt-24 lg:pb-24 pb-10 px-4 sm:px-6 lg:px-10">
       {/* Header */}
       <div className="w-full max-w-[1546px] px-4 sm:px-10 py-8 bg-white/5 rounded-xl outline-1 outline-offset-[-1px] outline-white/20 backdrop-blur-[30.90px] flex flex-col lg:flex-row justify-between items-center gap-6">
-        <div className="text-white text-[54px] sm:text-[85px] md:text-[120px] lg:text-[154.47px] font-semibold font-['Cormorant_SC'] uppercase leading-none text-center lg:text-left">
+        <div className="text-white text-[44px] sm:text-[75px] md:text-[100px] lg:text-[134.47px] font-semibold font-montserrat uppercase leading-none text-center lg:text-left">
           UCNS
         </div>
-        <div className="w-full max-w-[475px] text-white text-2xl sm:text-4xl lg:text-6xl font-light font-['Cormorant_SC'] lowercase text-center leading-[1]">
+        <div className="w-full text-white text-2xl sm:text-4xl lg:text-6xl font-light font-montserrat lowercase text-center leading-[1]">
           Universal Content Numbering System
         </div>
       </div>
@@ -77,7 +77,7 @@ const Node: React.FC<NodeProps> = ({ icon, title, desc, position }) => {
       >
         {isTop && (
           <>
-            <h3 className="text-white text-lg font-bold font-['Cormorant_SC'] uppercase leading-tight">
+            <h3 className="text-white text-lg font-bold font-montserrat uppercase leading-tight">
               {title}
             </h3>
             <p className="text-white text-sm font-light font-['Montserrat'] mt-1 max-w-[200px]">
@@ -102,7 +102,7 @@ const Node: React.FC<NodeProps> = ({ icon, title, desc, position }) => {
           <>
             <div className="w-2 h-2 bg-white rounded-full mt-2" />
             <div className="w-[2px] h-10 bg-white" />
-            <h3 className="text-white text-lg font-bold font-['Cormorant_SC'] uppercase leading-tight mt-2">
+            <h3 className="text-white text-lg font-bold font-montserrat uppercase leading-tight mt-2">
               {title}
             </h3>
             <p className="text-white text-sm font-light font-['Montserrat'] mt-1 max-w-[200px]">
@@ -123,7 +123,7 @@ const Node: React.FC<NodeProps> = ({ icon, title, desc, position }) => {
             className="object-contain"
           />
         </div>
-        <h3 className="text-white text-base font-bold font-['Cormorant_SC'] uppercase">
+        <h3 className="text-white text-base font-bold font-montserrat uppercase">
           {title}
         </h3>
         <p className="text-white text-sm font-light font-['Montserrat'] max-w-xs">

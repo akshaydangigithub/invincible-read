@@ -48,7 +48,7 @@ const authors = [
     img: "/authors/sagarsinha.jpg",
   },
   {
-    name: "Anirudh Acharya",
+    name: "Aniruddhacharya",
     img: "/authors/anirudhracharya.jpg",
   },
   {
@@ -56,7 +56,7 @@ const authors = [
     img: "/authors/ankit baiyanpuria.jpg",
   },
   {
-    name: "Bageswar Dham",
+    name: "Bageshwar Dham",
     img: "/authors/bageswar dham.jpg",
   },
   {
@@ -76,7 +76,7 @@ const authors = [
     img: "/authors/nitish rajput.jpg",
   },
   {
-    name: "Premanand Maharaj",
+    name: "Premanand Ji Maharaj",
     img: "/authors/premanand maharaj.jpg",
   },
   {
@@ -84,7 +84,7 @@ const authors = [
     img: "/authors/Pr sundar.jpg",
   },
   {
-    name: "Sipra Mishra",
+    name: "Shipra Mishra",
     img: "/authors/sipra mishra.jpg",
   },
 ];
@@ -144,7 +144,7 @@ const Authors = () => {
           {[...authors, ...authors].map((author, index) => (
             <SwiperSlide key={index} className="flex justify-center">
               <div
-                className="h-72 relative lg:w-[90%] w-full rounded-lg overflow-hidden p-2 bg-[#1C1C1C] group cursor-pointer"
+                className="h-72 relative  w-full rounded-lg overflow-hidden p-2 bg-[#1C1C1C] group cursor-pointer"
               >
                 <img
                   src={author.img}

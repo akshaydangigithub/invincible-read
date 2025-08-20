@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const EventGallery = () => {
@@ -176,6 +177,14 @@ const EventGallery = () => {
           className="w-full h-auto object-cover rounded-lg"
         /> */}
       </div>
+
+      <Link
+        href={"/archives"}>
+
+        <button className="mt-10 sm:mt-12 block mx-auto px-6 sm:px-8 lg:px-20 cursor-pointer uppercase py-2 sm:py-2 text-sm sm:text-base bg-[#2B2B2B] text-white rounded-full">
+          Load More
+        </button>
+      </Link>
     </section>
   );
 };

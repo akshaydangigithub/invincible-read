@@ -25,13 +25,14 @@ const logos = [
 
 const LogoScroll = () => {
   return (
-    <section className="relative w-full text-white overflow-hidden pt-16 lg:pb-16 px-4 sm:px-10">
-      <h2 className="text-center font-montserrat font-medium text-[40px] sm:text-[60px] leading-[1.4] tracking-wide uppercase mb-10">
-        Press | award | recognition
+    <section className="relative w-full text-white overflow-hidden pt-24 lg:pb-16 px-4 sm:px-10">
+      <h2 className="text-center font-montserrat font-medium text-[40px] sm:text-[60px] leading-[1] tracking-wide uppercase mb-5">
+        Press
       </h2>
-      <button className="mt-16 bg-[#2B23B8] text-white px-6 py-3 rounded-[11px] font-montserrat uppercase text-[16px] cursor-pointer font-medium mx-auto block">
+      <p className="text-xl font-thin text-white/80 text-center">In the Spotlight of Web3 Media</p>
+      {/* <button className="mt-16 bg-[#2B23B8] text-white px-6 py-3 rounded-[11px] font-montserrat uppercase text-[16px] cursor-pointer font-medium mx-auto block">
         Web3 Media
-      </button>
+      </button> */}
 
       {/* Marquee Container */}
       <div className="relative w-full mt-16 overflow-hidden">

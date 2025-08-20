@@ -3,30 +3,34 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { FaDiscord, FaLinkedin, FaTelegram } from "react-icons/fa";
-import { FaMedium, FaSquareXTwitter } from "react-icons/fa6";
+import { FaMedium, FaSquareXTwitter, FaInstagram } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 const socialIcons = [
   {
-    icon: <FaTelegram className="h-5 w-5 cursor-pointer" />,
+    icon: <FaTelegram className="h-5 w-5 cursor-pointer hover:text-[#28A8E9] duration-100" />,
     link: "https://t.me/invincible_read",
   },
   {
-    icon: <FaLinkedin className="h-5 w-5 cursor-pointer" />,
+    icon: <FaLinkedin className="h-5 w-5 cursor-pointer hover:text-[#0A66C2] duration-100" />,
     link: "https://www.linkedin.com/company/invincibleread/?viewAsMember=true",
   },
   {
-    icon: <FaDiscord className="h-5 w-5 cursor-pointer" />,
+    icon: <FaDiscord className="h-5 w-5 cursor-pointer hover:text-[#5865F2] duration-100" />,
     link: "https://discord.gg/jGtrk7TejJ",
   },
   {
-    icon: <FaSquareXTwitter className="h-7 w-7 cursor-pointer" />,
+    icon: <FaSquareXTwitter className="h-5 w-5 cursor-pointer hover:text-[#ccc] duration-100" />,
     link: "https://x.com/invincible_read",
   },
   {
-    icon: <FaMedium className="h-7 w-7 cursor-pointer" />,
-    link: "https://x.com/invincible_read",
+    icon: <FaMedium className="h-5 w-5 cursor-pointer hover:text-[#ccc] duration-100" />,
+    link: "https://medium.com/@invincibleread",
+  },
+  {
+    icon: <FaInstagram className="h-5 w-5 cursor-pointer hover:text-[#FF03BC] duration-100" />,
+    link: "https://www.instagram.com/invincibleread/?hl=en",
   },
 ];
 
