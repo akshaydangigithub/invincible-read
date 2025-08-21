@@ -14,6 +14,7 @@ import { waitForTransactionReceipt } from "wagmi/actions";
 import { ToastContainer, toast } from "react-toastify";
 import { config } from "../../config";
 import { injected } from "wagmi/connectors";
+import { useAppKit } from "@reown/appkit/react";
 
 /** -------------------------------
  *  Network + Contracts
@@ -83,6 +84,7 @@ const InvestmentCard: React.FC = () => {
   const [tokensSold, setTokensSold] = useState<number | null>(null);
 
   const { isConnected, address } = useAccount();
+  const { open } = useAppKit();
   const chainId = useChainId();
   const { connect } = useConnect();
   const { writeContractAsync } = useWriteContract();
@@ -315,7 +317,12 @@ const InvestmentCard: React.FC = () => {
 
             {!isConnected ? (
               <button
-                onClick={() => connect({ connector: injected() })}
+                onClick={() =>
+                  open({
+                    view: isConnected ? "Account" : "Connect",
+                    namespace: "eip155",
+                  })
+                }
                 className="mt-6 w-full bg-indigo-800 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition text-sm"
               >
                 Connect Wallet
@@ -353,7 +360,7 @@ const InvestmentCard: React.FC = () => {
           </div>
 
           {/* Right Panel — restored styling & content */}
-          <div className="flex-1 border border-white/10 shadow-xl  rounded-[19px] md:p-6 p-3 overflow-hidden text-white font-montserrat max-h-[580px]">
+          <div className="flex-1 border border-white/10 shadow-xl  rounded-[19px] md:p-6 p-3 overflow-hidden text-white font-montserrat md:max-h-[580px] max-h-[520px]">
             <div className="flex flex-col items-center justify-center">
               <h3 className="md:text-2xl text-xl font-bold mb-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
@@ -397,7 +404,7 @@ const InvestmentCard: React.FC = () => {
             <img
               src="./section2/blue_token.png"
               alt="Blue Token"
-              className="w-96 h-96 mx-auto md:mt-10"
+              className="md:w-96 md:h-96 mx-auto md:mt-10"
             />
           </div>
           {/* End Right Panel */}

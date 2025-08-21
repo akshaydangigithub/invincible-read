@@ -23,7 +23,7 @@ const Left = () => {
       </div>
 
       {/* 📢 Headings */}
-      <div className="text-center z-20 px-4 md:mt-36 mt-16 w-fit mx-auto">
+      <div className="text-center z-20 px-4 mt-10 w-fit mx-auto">
         <h2 className="text-[40px] sm:text-[60px] leading-[1] font-['Cormorant_SC'] font-semibold uppercase tracking-[-0.04em'] max-w-[80vw] break-words">
           DOWNLOAD
         </h2>
@@ -38,8 +38,9 @@ const Left = () => {
         <div className="flex items-center gap-2 mt-5 flex-col md:flex-row">
           <Link
             href={
-              "/https://play.google.com/store/apps/details?id=com.invincibleapp.app&pcampaignid=web_share"
+              "https://play.google.com/store/apps/details?id=com.invincibleapp.app&pcampaignid=web_share"
             }
+            target="_blank"
           >
             <div className="border-[1px] flex gap-2 items-center border-white w-44 rounded-lg px-3 py-2 cursor-pointer bg-black md:w-fit">
               <img
