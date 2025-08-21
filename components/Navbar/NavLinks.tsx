@@ -12,7 +12,7 @@ const NavLinks: React.FC = () => {
   ];
 
   return (
-    <div className="hidden md:flex items-center gap-[12.54px]">
+    <div className="hidden lg:flex items-center gap-[12.54px]">
       {links.map((link, i) => (
         <Link
           key={i}
