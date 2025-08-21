@@ -39,33 +39,37 @@ const TransactionDashboard: React.FC = () => {
       const data = await fetchTxs();
       setTxs(data);
 
-      // Convert API data to transaction format
-      const eventsV2 = data.filter((e) => e.contract === 'V2');
-      if (eventsV2.length > 0) {
-        const convertedTransactions = eventsV2.map(event => convertEventToTransaction({
-          address: event.address || '0x',
-          usdt: event.usdt || 0,
-          read: event.read || 0,
-          pricePerToken: event.pricePerToken || 0,
-          timestamp: event.timestamp || new Date().toLocaleString(),
-          ts: event.ts || Date.now(),
-          tx: event.tx || '',
-          contract: event.contract || 'V2'
-        }));
+      const eventsV2 = data.filter((e) => e.contract === "V2");
 
-        // Sort by timestamp (newest first)
-        convertedTransactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      if (eventsV2.length > 0) {
+        const convertedTransactions = eventsV2.map(event =>
+          convertEventToTransaction({
+            address: event.address || "0x",
+            usdt: event.usdt || 0,
+            read: event.read || 0,
+            pricePerToken: event.pricePerToken || 0,
+            timestamp: event.timestamp || new Date().toLocaleString(),
+            ts: event.ts || Date.now(),
+            tx: event.tx || "",
+            contract: event.contract || "V2",
+          })
+        );
+
+        convertedTransactions.sort(
+          (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+        );
+
         setTransactions(convertedTransactions);
-      } else {
-        setTransactions([]);
       }
+      // ⬆️ don’t wipe transactions when API gives empty array
     } catch (error) {
-      console.error('Error fetching transactions:', error);
-      setTransactions([]);
+      console.error("Error fetching transactions:", error);
+      // maybe keep showing old data instead of wiping
     } finally {
       setLoading(false);
     }
   };
+
 
   // Initial fetch
   useEffect(() => {

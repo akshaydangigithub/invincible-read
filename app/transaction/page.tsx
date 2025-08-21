@@ -19,6 +19,7 @@ const TransactionPage: React.FC = () => {
   const [tokens, setTokens] = useState<bigint | null>(null);
   const [events, setEvents] = useState<DepositEvent[]>([]);
   const [loading, setLoading] = useState(true);
+  const [hasFetched, setHasFetched] = useState(false);
 
   const [referralData, setReferralData] = useState<{
     bonusPercentage: number;
@@ -52,11 +53,18 @@ const TransactionPage: React.FC = () => {
   useEffect(() => {
     const loadTxs = async () => {
       setLoading(true);
-      const parsed = await fetchTxs();
-      setEvents(parsed);
-      setLoading(false);
+      try {
+        const parsed = await fetchTxs();
+        if (parsed.length > 0) {
+          setEvents(parsed);
+        }
+      } catch (err) {
+        console.error("Error fetching txs", err);
+      } finally {
+        setLoading(false);
+        setHasFetched(true);
+      }
     };
-
     loadTxs();
   }, []);
 
@@ -224,7 +232,7 @@ const TransactionPage: React.FC = () => {
 
         {loading ? (
           <p className="text-center text-gray-400">Fetching on-chain activity...</p>
-        ) : (
+        ) : tabbedEvents.length > 0 ? (
           <div className="overflow-x-auto text-sm">
             <table className="w-full border border-gray-300 text-left">
               <thead className="bg-gray-200 text-black">
@@ -258,7 +266,9 @@ const TransactionPage: React.FC = () => {
               </tbody>
             </table>
           </div>
-        )}
+        ) : hasFetched ? (
+          <p className="text-center text-gray-500">No transactions found.</p>
+        ) : null}
 
 
       </div>
