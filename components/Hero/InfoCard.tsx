@@ -112,9 +112,9 @@ const InfoCard = () => {
             </button>
           </a> */}
           <div className="mt-6 text-indigo-400 text-sm sm:text-base font-mono tracking-widest uppercase">
-            <p className="text-center">Private Sale Tier 1 Ends in: {countdown}</p>
+            <p className="text-center">Private Sale Tier 1 Ends in: <br className="md:hidden block" /> {countdown}</p>
             <p className="animate-pulse mt-2 text-center">
-              Current stage price: $0.16/READ | Next
+              Current stage price: $0.16/READ <br className="lg:hidden block" /> <span className="hidden md:inline">|</span> Next
               stage price: $0.21/READ
             </p>
           </div>

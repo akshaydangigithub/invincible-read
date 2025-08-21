@@ -61,3 +61,7 @@
 .font-cormorant {
   font-family: 'Cormorant', serif;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

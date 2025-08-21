@@ -19,7 +19,7 @@ const Usp = () => {
       ))}
 
       {/* MOBILE ONLY IMAGE + HEADING */}
-      <div className="md:hidden flex flex-col items-center mb-10">
+      <div className="md:hidden flex flex-col items-center lg:mb-10">
         <h1 className="text-white text-2xl text-center font-semibold mt-6">
           The INVINCIBLE READ is Here!
         </h1>
@@ -36,10 +36,10 @@ const Usp = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="relative z-20 flex flex-col md:flex-row pt-20 justify-center gap-10"
+        className="relative z-20 flex flex-col md:flex-row lg:pt-20 justify-center gap-10"
       >
         {/* LEFT COLUMN */}
-        <div className="flex flex-col gap-16 mt-10 font-montserrat w-full md:w-[600px]">
+        <div className="flex flex-col lg:gap-16 gap-10 mt-10 font-montserrat w-full md:w-[600px]">
           {/* Box 1 */}
           <div className="flex flex-col gap-3 items-center md:items-end text-center md:text-right md:pr-2">
             <div className="hidden md:flex justify-end w-full">
@@ -102,7 +102,7 @@ const Usp = () => {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col mt-10 gap-16 font-montserrat w-full md:w-[600px]">
+        <div className="flex flex-col lg:gap-16 gap-10 font-montserrat w-full md:w-[600px]">
           {/* Box 1 */}
           <div className="flex flex-col gap-3 items-center md:items-start text-center md:text-left md:pl-2">
             <div className="hidden md:flex justify-start w-full">

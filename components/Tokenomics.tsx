@@ -30,8 +30,8 @@ export default function Tokenomics() {
         <div className="w-full max-w-[540px] flex flex-col gap-3.5">
           {tokens.map((item, index) => (
             <div key={index} className="inline-flex items-center gap-3.5">
-              <div className={`w-14 h-3.5 ${item.color}`} />
-              <span className="text-xl font-light font-montserrat capitalize leading-9 tracking-tight">
+              <div className={`md:w-14 w-8 shrink-0 h-3.5 ${item.color}`} />
+              <span className="md:text-xl text-sm font-light font-montserrat capitalize md:leading-9 leading-6 tracking-tight">
                 {item.label}
               </span>
             </div>

@@ -6,14 +6,14 @@ import Link from "next/link";
 
 const Left = () => {
   return (
-    <section className="relative w-full lg:min-h-screen min-h-[100vh] overflow-hidden text-white flex flex-col items-center justify-center px-4 sm:px-8">
+    <section className="relative w-full md:min-h-[80vh] min-h-[60vh] overflow-hidden text-white flex flex-col items-center justify-between px-4 sm:px-8">
       <img
         src="/background2.png"
         alt="Background"
-        className="absolute md:h-[30%] h-[30%] md:top-1/2 top-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute h-[50%] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
       {/* 📱 Phone Image */}
-      <div className="absolute w-[300px] h-[400px] sm:w-[250px] sm:h-[500px] left-1/2 md:top-1/2 top-[40%] transform -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute w-[300px] h-[400px] sm:w-[250px] sm:h-[500px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
         <Image
           src="/iPhone2.png"
           alt="App Phone"
@@ -23,7 +23,7 @@ const Left = () => {
       </div>
 
       {/* 📢 Headings */}
-      <div className="text-center z-20 px-4 md:mb-[25rem] mb-[30rem] w-fit mx-auto">
+      <div className="text-center z-20 px-4 md:mt-36 mt-16 w-fit mx-auto">
         <h2 className="text-[40px] sm:text-[60px] leading-[1] font-['Cormorant_SC'] font-semibold uppercase tracking-[-0.04em'] max-w-[80vw] break-words">
           DOWNLOAD
         </h2>
@@ -33,7 +33,7 @@ const Left = () => {
         </div>
       </div>
 
-      <div className="mb-34 z-20 absolute lg:bottom-16 -bottom-[12%] flex flex-col items-center justify-center">
+      <div className="md:mt-28 z-20 flex flex-col items-center justify-center">
         <p className="text-white text-center">DOWNLOAD FROM</p>
         <div className="flex items-center gap-2 mt-5 flex-col md:flex-row">
           <Link
@@ -41,7 +41,7 @@ const Left = () => {
               "/https://play.google.com/store/apps/details?id=com.invincibleapp.app&pcampaignid=web_share"
             }
           >
-            <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
+            <div className="border-[1px] flex gap-2 items-center border-white w-44 rounded-lg px-3 py-2 cursor-pointer bg-black md:w-fit">
               <img
                 src="/icons/googleplay.svg"
                 alt="google play"
@@ -57,7 +57,7 @@ const Left = () => {
               </div>
             </div>
           </Link>
-          <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
+          <div className="border-[1px] flex gap-2 items-center border-white w-44 rounded-lg px-3 py-2 cursor-pointer bg-black md:w-fit">
             <img
               src="/icons/apple.svg"
               alt="google play"
@@ -72,7 +72,7 @@ const Left = () => {
               </p>
             </div>
           </div>
-          <div className="border-[1px] flex gap-2 items-center border-white w-fit rounded-lg px-3 py-2 cursor-pointer">
+          <div className="border-[1px] flex gap-2 items-center border-white w-44 rounded-lg px-3 py-2 cursor-pointer bg-black md:w-fit">
             <img src="/icons/tg.svg" alt="google play" className="h-[25px]" />
             <div>
               <span className="text-white leading-none text-[12px] font-thin">

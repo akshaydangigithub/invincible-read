@@ -13,7 +13,6 @@ import Tokenomics from "@/components/Tokenomics";
 import EventGallery from "@/components/EventGallery";
 import FAQ from "@/components/FAQ/FAQ";
 import EventsJourney from "@/components/Events/EventsJourney";
-import MobileMenu from "@/components/MobileMenu";
 
 const page = () => {
   return (
@@ -46,7 +45,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="relative overflow-hidden lg:mt-0 mt-20">
+      <div className="relative overflow-hidden lg:mt-0 mt-6">
         <img
           src="/section3/vector1.png"
           alt=""
@@ -79,7 +78,6 @@ const page = () => {
         <FAQ />
       </div>
 
-      <MobileMenu />
     </div>
   );
 };

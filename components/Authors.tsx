@@ -109,7 +109,7 @@ const Authors = () => {
             reverseDirection: false,
           }}
           speed={3000}
-          allowTouchMove={false}
+          allowTouchMove={true}
           freeMode={true}
           centeredSlides={false}
           breakpoints={{

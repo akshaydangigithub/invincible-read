@@ -21,10 +21,10 @@ const ImageScroller: FC = () => {
   return (
     <div className="relative w-full py-6 overflow-hidden">
       {/* Left Blur Gradient */}
-      <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-black via-black/70 to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 h-full lg:w-20 w-14 bg-gradient-to-r from-black via-black/70 to-transparent z-10 pointer-events-none" />
 
       {/* Right Blur Gradient */}
-      <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-black via-black/70 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full lg:w-20 w-14 bg-gradient-to-l from-black via-black/70 to-transparent z-10 pointer-events-none" />
 
       <Swiper
         modules={[Autoplay]}
@@ -38,7 +38,7 @@ const ImageScroller: FC = () => {
           reverseDirection: false,
         }}
         speed={3000}
-        allowTouchMove={false}
+        allowTouchMove={true}
         freeMode={true}
         centeredSlides={false}
         breakpoints={{

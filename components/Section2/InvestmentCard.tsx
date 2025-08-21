@@ -223,7 +223,7 @@ const InvestmentCard: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Panel */}
           <div className="flex-1 text-white font-montserrat space-y-4  max-h-[580px]">
-            <h2 className="text-xl sm:text-3xl font-semibold">Investment</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold">Investment</h2>
             <p className="text-sm">Min: $10 – Max: $100,000</p>
 
             {/* Current price */}

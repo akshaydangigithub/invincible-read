@@ -55,28 +55,30 @@ export default function ArchivesPage() {
   })
 
   return (
-    <section className="w-[90%] mx-auto min-h-screen bg-black text-white px-20 mt-16 py-12 sm:py-20">
-      <h1 className="text-center text-[36px] sm:text-[60px] font-montserrat font-medium leading-tight uppercase tracking-wide mb-12">
-        Invincible Event Archive
-      </h1>
+    <>
+      <section className="w-[90%] mx-auto min-h-screen bg-black text-white lg:px-20 mt-16 py-12 sm:py-20">
+        <h1 className="text-center text-[36px] sm:text-[60px] font-montserrat font-medium leading-tight uppercase tracking-wide mb-12">
+          Invincible Event Archive
+        </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className={`relative rounded-xl overflow-hidden ${index % 7 === 0 ? 'row-span-2 col-span-2' : ''
-              }`}
-          >
-            <Image
-              src={src}
-              alt={`Event ${index + 1}`}
-              width={600}
-              height={600}
-              className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {images.map((src, index) => (
+            <div
+              key={index}
+              className={`relative rounded-xl overflow-hidden ${index % 7 === 0 ? 'row-span-2 col-span-2' : ''
+                }`}
+            >
+              <Image
+                src={src}
+                alt={`Event ${index + 1}`}
+                width={600}
+                height={600}
+                className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

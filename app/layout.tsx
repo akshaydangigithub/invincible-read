@@ -7,6 +7,8 @@ import ContextProvider from "@/context";
 import { headers } from "next/headers";
 import { ReactNode } from "react";
 import { LenisProvider } from "@/components/providers/LenisProvider";
+import LoadingScreen from "@/components/Loader";
+import MobileMenu from "@/components/MobileMenu";
 
 export const metadata: Metadata = {
   title: "INVINCIBLE READ – Web3 Knowledge Revolution",
@@ -65,9 +67,13 @@ export default async function RootLayout({
         />
       </head>
       <body className="bg-black text-white font-montserrat overflow-x-hidden mx-auto">
+
+        {/* 🔥 Full-page loader */}
+        {/* <LoadingScreen /> */}
         <ContextProvider cookies={cookies}>
           <LenisProvider>
             <TopBanner />
+            <MobileMenu />
             <div style={{ paddingTop: "42px" }}>
               <Navbar />
               <main>{children}</main>

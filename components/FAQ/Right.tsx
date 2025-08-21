@@ -120,7 +120,7 @@ const Right = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="w-full flex justify-center items-center py-16">
+    <div className="w-full flex justify-center items-center">
       <div className="w-[768px] px-8 pt-10 pb-10 bg-white/5 rounded-[20px] border-l border-t border-white/30 backdrop-blur-[2.5px] inline-flex flex-col items-center gap-10">
         {/* Heading */}
         <div className="text-center leading-[64px]">
@@ -145,9 +145,8 @@ const Right = () => {
                 </div>
                 <div className="w-5 h-7 flex items-center justify-center relative mt-[2px]">
                   <div
-                    className={`w-4 h-0.5 bg-white transition-transform duration-300 ${
-                      openIndex === index ? "rotate-90" : ""
-                    }`}
+                    className={`w-4 h-0.5 bg-white transition-transform duration-300 ${openIndex === index ? "rotate-90" : ""
+                      }`}
                   />
                 </div>
               </div>

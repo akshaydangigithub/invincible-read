@@ -63,7 +63,7 @@ const TokenUtilityOverview: React.FC = () => {
             <h3 className="text-white text-base font-bold font-montserrat uppercase leading-tight tracking-tight">
               {feature.title}
             </h3>
-            <p className="text-white text-xs font-light font-montserrat leading-tight tracking-tight">
+            <p className="text-white text-xs font-light font-montserrat leading-tight tracking-tight md:mt-0 -mt-3">
               {feature.desc}
             </p>
           </div>
@@ -114,13 +114,13 @@ const TokenUtilityOverview: React.FC = () => {
         <div className="flex flex-col gap-6 flex-1">
           {/* Gated Content Card */}
           <div className="relative bg-[#2B23B8] rounded-[25px] w-full h-[190px] px-6 py-4 overflow-hidden">
-            <h4 className="absolute right-6 top-6 text-white text-[25.6px] leading-[31px] font-bold font-montserrat w-[60%] text-right capitalize z-10">
+            <h4 className="absolute right-6 top-6 text-white text-[25.6px] leading-[31px] font-bold font-montserrat md:w-[60%] w-full text-right capitalize z-10">
               Access to gated content and tools
             </h4>
             <img
               src="/gated.png"
               alt="Gated Content Illustration"
-              className="absolute -left-[10%] top-[30%] rotate-0 w-[120%] md:w-[100%] h-auto z-0"
+              className="absolute -left-[10%] md:top-[30%] top-1/2 rotate-0 w-[120%] md:w-[100%] h-auto z-0"
             />
           </div>
 
