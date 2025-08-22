@@ -72,7 +72,7 @@ const InfoCard = () => {
     <div className="rounded-xl p-6 text-white bg-black/30 backdrop-blur-sm border border-white/10 shadow-xl -mt-16 relative z-10">
       <div className="flex items-start justify-between flex-col lg:flex-row ">
         <h1 className="md:text-[64px] text-[40px] leading-none uppercase">
-          <span className="font-bold">Worlds first web3</span> <br className="lg:block hidden" />
+          <span className="font-bold">World's first web3</span> <br className="lg:block hidden" />
           Publishing company
         </h1>
 
