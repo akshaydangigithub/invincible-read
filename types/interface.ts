@@ -1,5 +1,6 @@
 
 export interface TransactionData {
+    tx: any;
     wallet: string;
     USDT: string;
     READ: string;

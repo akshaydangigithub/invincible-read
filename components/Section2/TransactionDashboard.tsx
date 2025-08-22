@@ -25,6 +25,7 @@ const convertEventToTransaction = (event: EventData): TransactionData => {
     USDT: event.usdt.toFixed(2),
     READ: event.read.toFixed(2),
     date: event.timestamp,
+    tx: event.tx,
   };
 };
 
@@ -135,6 +136,9 @@ const TransactionDashboard: React.FC = () => {
                     <th className="py-2 sm:py-3 px-2 sm:px-4 text-left text-xs text-black font-bold uppercase first:rounded-tl-lg last:rounded-tr-lg">
                       Date
                     </th>
+                    <th className="py-2 sm:py-3 px-2 sm:px-4 text-left text-xs text-black font-bold uppercase first:rounded-tl-lg last:rounded-tr-lg">
+                      Tx
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-transparent divide-y divide-gray-200">
@@ -166,7 +170,7 @@ const TransactionDashboard: React.FC = () => {
                         }}
                         layout
                       >
-                        <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm text-[#818CF8] break-words max-w-[120px] sm:max-w-[200px]">
+                        <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs text-[#818CF8] break-words max-w-[120px] sm:max-w-[200px]">
                           <span className="block sm:hidden">
                             {item.wallet.slice(0, 4)}...{item.wallet.slice(-4)}
                           </span>
@@ -199,6 +203,11 @@ const TransactionDashboard: React.FC = () => {
                           <span className="hidden sm:block">
                             {item.date}
                           </span>
+                        </td>
+                        <td className="py-2 sm:py-3 px-2 sm:px-4 text-xs sm:text-sm text-blue-400 underline">
+                          <a href={`https://bscscan.com/tx/${item.tx}`} target="_blank" rel="noopener noreferrer">
+                            View Tx
+                          </a>
                         </td>
                       </motion.tr>
                     ))}
